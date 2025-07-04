@@ -6,7 +6,7 @@
 
 * Dunst
 * Fastfetch
-* Hyprland ecosystem
+* Hyprland Ecosystem
 * Kitty
 * NeoVim
 * Rofi
