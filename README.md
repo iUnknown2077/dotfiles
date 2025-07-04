@@ -2,7 +2,7 @@
 
 My Arch Hyprland dotfiles.
 
-<img src="/screenshots/yellow_1.png" width="100%" />
+<img src="/screenshots/yellow_2.png" width="100%" />
 
 # What configs does it have?
 
