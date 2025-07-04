@@ -1,10 +1,8 @@
-# What is this?
-
-My Arch Hyprland dotfiles.
+<h1 align="center">Yellow Dracula Arch Hyprland</h1>
 
 <img src="/screenshots/yellow_2.png" width="100%" />
 
-# What configs does it have?
+# Software I use
 
 * Dunst
 * Fastfetch
