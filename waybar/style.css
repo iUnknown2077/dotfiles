@@ -1,0 +1,68 @@
+@import url("colors.css");
+
+* {
+	border: none;
+	border-radius: 0;
+    	font-family: "Hack Nerd Font Mono";
+    	font-size: 14px;
+    	min-height: 0;
+}
+
+window#waybar {
+    	background: transparent;
+    	color: @foreground;
+    	border-bottom: 1px solid @yellow;
+	background-color: rgba(40, 42, 54, 0.5);
+}
+
+tooltip {
+	background-color: rgba(40, 42, 54, 0.75);
+	border: 1px solid @yellow;
+}
+tooltip label {
+	color: @foreground;
+}
+
+#workspaces {
+	background-color: transparent;
+}
+
+#workspaces button {
+    	padding: 0 8px;
+	margin: 0 0px;
+    	background-color: rgba(40, 42, 54, 0.75);
+    	color: @foreground;
+	border-bottom: 1px solid @yellow;
+}
+
+#workspaces button:hover {
+	background: @background;
+	border: @background;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	border-bottom: 1px solid @yellow;
+}
+
+#workspaces button.active {
+	color: @foreground;
+	background-color: rgba(40, 42, 54, 0.75);
+}
+
+#workspaces button.urgent {
+	background-color: @red;
+	color: @background;
+}
+
+
+#wireplumber, #clock{
+	padding: 0px 10px;
+	border-bottom: 1px solid @yellow;
+}
+
+#wireplumber {
+	background-color: rgba(40, 42, 54, 0.75);
+}
+
+#clock {
+	background-color: rgba(40, 42, 54, 0.75);
+}
