@@ -1,9 +1,8 @@
 # What is this?
 
 My Arch Hyprland dotfiles.
-<br>
 
-![](yellow_2.png)
+<img src="/screenshots/yellow_1.png" width="100%" />
 
 # What configs does it have?
 
@@ -16,5 +15,5 @@ My Arch Hyprland dotfiles.
 * Waybar
 * Bash
 * Starship
-<br>
-![](yellow_1.png)
+
+<img src="/screenshots/yellow_1.png" width="100%" />
