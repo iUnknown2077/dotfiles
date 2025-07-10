@@ -66,7 +66,8 @@
         " "
       ]
     },
-    "tooltip": false
+    "tooltip": false,
+    "scroll-step": 0
   },
 
   "wireplumber#text": {
@@ -99,7 +100,7 @@
   "cpu#text": {
     "interval": 1,
     "format": "{usage}%",
-    "tooltip": "false"
+    "tooltip": false
   },
 
   "network#icon": {
