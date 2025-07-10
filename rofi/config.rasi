@@ -1,0 +1,115 @@
+configuration {
+ show-icons: true;
+ icon-theme: "Papirus-Dark";
+ location: 0;
+ font: "Hack Nerd Font Mono 12";
+ display-drun: "";
+ drun-display-format: "{name}";
+ disable-history: true;
+}
+
+@import "dracula.rasi"
+
+window {
+ width: 35%;
+ transparency: "real";
+ orientation: vertical;
+ border: 0px;
+ border-color: yellow;
+ border-radius: 10px;
+ background-color: @bg;
+}
+
+mainbox {
+ children: [inputbar, listview];
+}
+
+element {
+ padding: 4px 12px ;
+ cursor: pointer;
+ border-radius: 5px;
+ text-color: @bg;
+}
+
+element selected {
+ text-color: @fg;
+ background-color: @bg;
+}
+
+element-text {
+ background-color: inherit;
+ text-color: inherit;
+ cursor: inherit;
+ highlight: inherit;
+}
+
+element-icon {
+ size: 16 px;
+ background-color: inherit;
+ padding: 0 4 0 0;
+ alignment: vertical;
+}
+
+element.selected.active {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.alternate.normal {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.alternate.active {
+ background-color: @fg;
+ text-color: @bg;
+}
+
+element.selected.normal {
+ background-color: @fg;
+ text-color: @bg;
+}
+
+element.normal.active {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.normal.normal {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.normal.urgent {
+ background-color: @red;
+ text-color: @bg;
+}
+
+listview {
+ columns: 1;
+ lines: 8;
+ padding: 8 0;
+ fixed-height: true;
+ fixed-columns: true;
+ fixed-lines: true;
+ border: 0 dash 0 0;
+ scrollbar: false;
+}
+
+entry {
+ text-color: @fg;
+ padding: 0 0 0 0;
+ margin: 0 -2 0 0;
+ placeholder: "Search";
+ blink: true;
+}
+
+inputbar {
+ margin: 0 0 0 0;
+}
+
+prompt {
+ text-color: @bg;
+ padding: 8 4 0 8;
+ margin: 0 -2 0 0;
+}

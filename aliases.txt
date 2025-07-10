@@ -1,0 +1,10 @@
+# Aliases
+
+alias reboot='systemctl reboot'
+
+alias ls='eza -ahl --color=always --group-directories-first'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+alias ff='fastfetch'

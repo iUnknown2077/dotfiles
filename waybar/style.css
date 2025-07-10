@@ -1,0 +1,154 @@
+@import "colors.css";
+
+*{
+  font-family: "Hack Nerd Font Mono";
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  min-height: 0;
+}
+
+@keyframes blink_red {
+  to {
+    background-color: @pink;
+    color: @background;
+  }
+}
+
+.warning,
+.critical,
+.urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+window>box {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  background-color: @background;
+}
+
+#workspaces {
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+#workspaces button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: @foreground;
+}
+
+#workspaces button.focused {
+  background-color: @cyan;
+  color: @background;
+}
+
+#workspaces button.urgent {
+  color: @background;
+}
+
+#workspaces button:hover {
+  background-color: @pink;
+  color: @background;
+}
+
+tooltip {
+  background: @background;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+#custom-launcher {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
+  color: #1793d1;
+}
+
+#clock,
+#custom-powermenu,
+#tray {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#clock {
+  color: @foreground;
+}
+
+#wireplumber.icon {
+  color: @yellow;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+#wireplumber.text {
+  color: @yellow;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+#memory.icon {
+  color: @cyan;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+#memory.text {
+  color: @cyan;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+#cpu.icon {
+  color: @purple;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+#cpu.text {
+  color: @purple;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+#network.icon {
+  color: @green;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+#network.text {
+  color: @green;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+#custom-powermenu {
+  font-size: 20px;
+  color: @red;
+}
+
+#tray menu {
+  background: @background;
+  color: @foreground;
+}

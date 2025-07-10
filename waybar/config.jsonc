@@ -1,0 +1,131 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "wireplumber#icon",
+    "wireplumber#text",
+    "memory#icon",
+    "memory#text",
+    "cpu#icon",
+    "cpu#text",
+    "network#icon",
+    "network#text",
+    "custom/powermenu"
+  ],
+
+  "custom/launcher": {
+    "format": "󰣇 ",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip": false
+  },
+
+  "wireplumber#icon": {
+    "format": "{icon}",
+    "format-muted": " ",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "tooltip": false
+  },
+
+  "wireplumber#text": {
+    "format": "{volume}",
+    "format-muted": "{volume}",
+    "on-click": "pwvucontrol",
+    "tooltip": false,
+    "scroll-step": 5
+  },
+
+  "memory#icon": {
+    "format": "󰍛 ",
+    "tooltip": false
+  },
+
+  "memory#text": {
+    "interval": 1,
+    "format": "{percentage}%",
+    "states": {
+      "warning": 85
+    },
+    "tooltip": false
+  },
+
+  "cpu#icon": {
+    "format": "󰻠 ",
+    "tooltip": false
+  },
+
+  "cpu#text": {
+    "interval": 1,
+    "format": "{usage}%",
+    "tooltip": "false"
+  },
+
+  "network#icon": {
+    "format-wifi": "󰖩 ",
+    "format-ethernet": " ",
+    "format-disconnected": "󰖪 ",
+    "tooltip": false
+  },
+
+  "network#text": {
+    "interval": 1,
+    "format-wifi": "{essid}",
+    "format-ethernet": "{ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip": true,
+    "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
+  },
+
+  "custom/powermenu": {
+    "format": " ",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  }
+}

@@ -1,0 +1,29 @@
+[global]
+monitor = 0
+follow = keyboard
+width = 300
+height = 300
+offset = 10x50
+padding = 10
+horizontal_padding = 10
+transparency = 15
+font = Hack Nerd Font Mono
+format = "%s %p\n%b"
+frame_width = 1
+frame_color = "#F1FA8C"
+
+[urgency_low]
+background = "#282A36"
+foreground = "#F8F8F2"
+timeout = 3
+
+[urgency_normal]
+background = "#282A36"
+foreground = "#F8F8F2"
+timeout = 5
+
+[urgency_critical]
+background = "#282A36"
+foreground = "#F8F8F2"
+frame_color = "#FF5555"
+timeout = 10
