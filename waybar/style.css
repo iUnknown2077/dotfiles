@@ -70,6 +70,9 @@ tooltip label {
   color: @foreground;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.2s ease;
 }
 
 #custom-launcher:hover {

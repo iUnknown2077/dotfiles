@@ -3,7 +3,7 @@ configuration {
  show-icons: false;
  scroll-method: 0;
  disable-history: true;
- sidebar-mode: true;
+ sidebar-mode: false;
 }
 
 @import "dracula.rasi"
@@ -13,54 +13,24 @@ window {
  border: 0px;
  padding: 10px;
  transparency: "real";
- width: 160px;
+ width: 192px;
  location: center;
 }
 
 listview {
- lines: 3;
+ lines: 4;
  columns: 1;
  scrollbar: false;
 }
 
 element {
- padding: 1px;
  border: 0px;
-}
-
-element selected {
- text-color: @fg;
- background-color: @bg;
+ padding: 1px;
 }
 
 element-text {
  background-color: inherit;
  text-color: inherit;
-}
-
-element.selected.active {
- background-color: @bg;
- text-color: @fg;
-}
-
-element.alternate.normal {
- background-color: @bg;
- text-color: @fg;
-}
-
-element.alternate.active {
- background-color: @fg;
- text-color: @bg;
-}
-
-element.selected.normal {
- background-color: @fg;
- text-color: @bg;
-}
-
-element.normal.active {
- background-color: @bg;
- text-color: @fg;
 }
 
 element.normal.normal {
@@ -73,9 +43,45 @@ element.normal.urgent {
  text-color: @bg;
 }
 
+element.normal.active {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.selected.normal {
+ background-color: @fg;
+ text-color: @bg;
+}
+
+element.selected.urgent {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.selected.active {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.alternate.normal {
+ background-color: @bg;
+ text-color: @fg;
+}
+
+element.alternate.urgent {
+ background-color: @fg;
+ text-color: @bg;
+}
+
+element.alternate.active {
+ background-color: @fg;
+ text-color: @bg;
+}
+
 entry {
  spacing: 0px;
  text-color: @fg;
+ placeholder: "Search";
 }
 
 prompt {

@@ -3,14 +3,15 @@ monitor = 0
 follow = keyboard
 width = 300
 height = 300
+frame_width = 1
+frame_color = "#282A36"
 offset = 10x50
 padding = 10
 horizontal_padding = 10
 transparency = 15
-font = Hack Nerd Font Mono
+font = Hack Nerd Font Mono 12
 format = "%s %p\n%b"
-frame_width = 1
-frame_color = "#282A36"
+corner_radius = 10
 
 [urgency_low]
 background = "#282A36"
