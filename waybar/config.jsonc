@@ -2,10 +2,13 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
+  "height": 28,
+  "spacing": 0,
 
   "modules-left": [
     "custom/launcher",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
 
   "modules-center": [
@@ -16,17 +19,13 @@
     "tray",
     "wireplumber#icon",
     "wireplumber#text",
-    "memory#icon",
-    "memory#text",
-    "cpu#icon",
-    "cpu#text",
     "network#icon",
     "network#text",
     "custom/powermenu"
   ],
 
   "custom/launcher": {
-    "format": "󰣇 ",
+    "format": "󰣇",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
@@ -50,6 +49,17 @@
     }
   },
 
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "brave-browser": "Brave Browser",
+      "discord": "Discord",
+      "kitty": "Kitty",
+      "thunar": "Thunar"
+    },
+    "max-lenght": 50
+  },
+
   "clock": {
     "interval": 1,
     "format": "{:%a %d %b %H:%M}",
@@ -58,12 +68,12 @@
 
   "wireplumber#icon": {
     "format": "{icon}",
-    "format-muted": " ",
+    "format-muted": "",
     "format-icons": {
       "default": [
-        " ",
-        " ",
-        " "
+        "",
+        "",
+        ""
       ]
     },
     "tooltip": false,
@@ -78,35 +88,10 @@
     "scroll-step": 5
   },
 
-  "memory#icon": {
-    "format": "󰍛 ",
-    "tooltip": false
-  },
-
-  "memory#text": {
-    "interval": 1,
-    "format": "{percentage}%",
-    "states": {
-      "warning": 85
-    },
-    "tooltip": false
-  },
-
-  "cpu#icon": {
-    "format": "󰻠 ",
-    "tooltip": false
-  },
-
-  "cpu#text": {
-    "interval": 1,
-    "format": "{usage}%",
-    "tooltip": false
-  },
-
   "network#icon": {
-    "format-wifi": "󰖩 ",
-    "format-ethernet": " ",
-    "format-disconnected": "󰖪 ",
+    "format-wifi": "󰖩",
+    "format-ethernet": "",
+    "format-disconnected": "󰖪",
     "tooltip": false
   },
 
@@ -120,7 +105,7 @@
   },
 
   "custom/powermenu": {
-    "format": " ",
+    "format": "",
     "on-click": "~/.config/rofi/powermenu.sh",
     "tooltip": false
   },
