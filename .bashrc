@@ -10,7 +10,7 @@ eval "$(starship init bash)"
 export TERM="xterm-256color"
 export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
-export HYPRCURSOR_THEME=WhiteSur-cursors
+export HYPRCURSOR_THEME=Bibata-Modern-Ice
 
 # Editor
 export EDITOR=nvim

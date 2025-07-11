@@ -25,7 +25,7 @@
   ],
 
   "custom/launcher": {
-    "format": "󰣇",
+    "format": "宮",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
@@ -52,8 +52,8 @@
   "hyprland/window": {
     "format": "{class}",
     "rewrite": {
-      "brave-browser": "Brave Browser",
-      "discord": "Discord",
+      "brave-browser": "Brave",
+      "com.discordapp.Discord": "Discord",
       "kitty": "Kitty",
       "nemo": "Nemo"
     },

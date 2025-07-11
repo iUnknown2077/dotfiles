@@ -10,7 +10,7 @@ transparency = 15
 font = Hack Nerd Font Mono
 format = "%s %p\n%b"
 frame_width = 1
-frame_color = "#F1FA8C"
+frame_color = "#282A36"
 
 [urgency_low]
 background = "#282A36"

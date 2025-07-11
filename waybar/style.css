@@ -8,33 +8,43 @@
   min-height: 0;
 }
 
-window#waybar {
-  background-color: transparent;
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @background;
+  }
 }
 
-window>box {
+.urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#waybar {
+  background: transparent;
+  color: @foreground;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0px;
-  background-color: @background;
 }
 
 #workspaces {
+  background: @background-op;
   padding-left: 0px;
-  padding-right: 4px;
+  padding-right: 0px;
 }
 
 #workspaces button {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  background: transparent;
+  color: @foreground;
   padding-left: 6px;
   padding-right: 6px;
-  color: @foreground;
-}
-
-#workspaces button.focused {
-  background-color: @cyan;
-  color: @background;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.2s ease;
 }
 
 #workspaces button.urgent {
@@ -42,7 +52,7 @@ window>box {
 }
 
 #workspaces button:hover {
-  background-color: @foreground;
+  background: @foreground;
   color: @background;
 }
 
@@ -56,26 +66,27 @@ tooltip label {
 }
 
 #custom-launcher {
-  font-size: 20px;
+  background: @background-op;
+  color: @foreground;
   padding-left: 10px;
   padding-right: 10px;
-  color: #1793d1;
 }
 
-#custom-launcher:hover{
-  font-size: 20px;
+#custom-launcher:hover {
+  background: @foreground;
+  color: @background;
   padding-left: 10px;
   padding-right: 10px;
-  color: @background;
-  background-color: @foreground;
 }
 
 #window {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  background: @background-op;
+  color: @foreground;
   padding-left: 6px;
   padding-right: 6px;
-  color: @foreground;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0px 0px 10px 0px;
 }
 
 #clock,
@@ -86,37 +97,51 @@ tooltip label {
 }
 
 #clock {
+  background: @background-op;
   color: @foreground;
+  border-radius: 0px 0px 10px 10px;
 }
 
 #wireplumber.icon {
-  color: @yellow;
   font-size: 20px;
+  background: @background-op;
+  color: @yellow;
   padding-left: 10px;
   padding-right: 2px;
 }
 
 #wireplumber.text {
+  background: @background-op;
   color: @yellow;
   padding-left: 2px;
   padding-right: 10px;
 }
 
 #network.icon {
-  color: @green;
   font-size: 20px;
+  background: @background-op;
+  color: @green;
   padding-left: 10px;
   padding-right: 2px;
 }
+
 #network.text {
+  background: @background-op;
   color: @green;
-  padding-left: 5px;
-  padding-right: 2px;
+  padding-left: 2px;
+  padding-right: 10px;
 }
 
 #custom-powermenu {
   font-size: 16px;
+  background: @background-op;
   color: @red;
+}
+
+#tray {
+  background: @background-op;
+  color: @foreground;
+  border-radius: 0px 0px 0px 10px;
 }
 
 #tray menu {
