@@ -17,40 +17,60 @@
   },
 
   "display": {
+    "separator": " | ",
     "color": {
       "keys": "93",
-      "title": "93"
+      "title": "97",
+      "separator": "97",
+      "output": "97"
     }
   },
 
   "modules": [
-    "title",
-    "separator",
+
+    {
+      "type": "title",
+      "key": ""
+    },
+
+    "break",
+
     {
       "type": "os",
-      "key": "Distro",
+      "key": "",
       "format": "{2}"
     },
 
     {
-      "type": "packages"
+      "type": "packages",
+      "key": "󰏖"
     },
 
     {
       "type": "shell",
+      "key": "",
       "format": "{1}"
     },
 
     {
       "type": "terminal",
+      "key": "",
       "format": "{1}"
     },
 
     {
       "type": "command",
       "shell": "/bin/bash",
-      "Key": "Challenge",
+      "key": "",
       "text": "~/.config/fastfetch/progress.sh"
+    },
+
+    "break",
+
+    {
+      "type": "colors",
+      "key": "",
+      "symbol": "circle"
     }
   ]
 }
