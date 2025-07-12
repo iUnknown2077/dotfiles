@@ -13,8 +13,8 @@ bind = $mainMod, M, exit,
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, SPACE, exec, $menu
-bind = $mainMod, P, swapsplit,
-bind = $mainMod, J, togglesplit,
+bind = $mainMod, P, pseudo,
+bind = $mainMod, J, swapsplit,
 bind = $mainMod, F, fullscreen, 0
 
 # Move focus

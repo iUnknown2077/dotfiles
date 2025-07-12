@@ -1,0 +1,8 @@
+# Editor
+export EDITOR=nvim
+export VISUAL=nvim
+
+# History
+export HISTFILESIZE=500
+export HISTSIZE=250
+export HISTCONTROL=erasedups:ignoredups:ignorespace

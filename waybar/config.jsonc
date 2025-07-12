@@ -52,11 +52,12 @@
   "hyprland/window": {
     "format": "{class}",
     "rewrite": {
-      "brave-browser": "Brave",
-      "com.discordapp.Discord": "Discord",
-      "kitty": "Kitty",
-      "nemo": "Nemo"
+      "brave-browser": "Brave $1",
+      "com.discordapp.Discord": "Discord $1",
+      "kitty": "Kitty $1",
+      "nemo": "Nemo $1"
     },
+    "separate-outputs": true,
     "max-lenght": 50
   },
 
@@ -81,8 +82,8 @@
   },
 
   "wireplumber#text": {
-    "format": "{volume}",
-    "format-muted": "{volume}",
+    "format": "{volume}%",
+    "format-muted": "{volume}%",
     "on-click": "pwvucontrol",
     "tooltip": false,
     "scroll-step": 5
@@ -111,7 +112,8 @@
   },
 
   "tray": {
-    "icon-size": 14,
-    "spacing": 10
+    "icon-size-multiplier": 1.6,
+    "spacing": 8,
+    "reverse-direction": false
   }
 }

@@ -1,0 +1,10 @@
+# Prompt theme
+eval "$(starship init bash)"
+
+# Colors
+export TERM="xterm-256color"
+
+# Cursor
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
+export HYPRCURSOR_THEME=Bibata-Modern-Ice

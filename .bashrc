@@ -3,20 +3,10 @@
 PS1='[\u@\h \W]\$ '
 
 # Aliases
-source ~/dotfiles/aliases.txt
+source ~/dotfiles/bashrc/aliases.txt
 
-# Visual
-eval "$(starship init bash)"
-export TERM="xterm-256color"
-export XCURSOR_SIZE=24
-export HYPRCURSOR_SIZE=24
-export HYPRCURSOR_THEME=Bibata-Modern-Ice
+# Customization
+source ~/dotfiles/bashrc/customization.txt
 
-# Editor
-export EDITOR=nvim
-export VISUAL=nvim
-
-# History
-export HISTFILESIZE=500
-export HISTSIZE=250
-export HISTCONTROL=erasedups:ignoredups:ignorespace
+# Miscellaneous
+source ~/dotfiles/bashrc/miscellaneous.txt
