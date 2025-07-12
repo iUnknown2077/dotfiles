@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 28,
+  "height": 30,
   "spacing": 0,
 
   "modules-left": [
@@ -51,6 +51,8 @@
 
   "hyprland/window": {
     "format": "{class}",
+    "icon": true,
+    "icon-size": 12,
     "rewrite": {
       "brave-browser": "Brave $1",
       "com.discordapp.Discord": "Discord $1",
@@ -58,7 +60,8 @@
       "nemo": "Nemo $1"
     },
     "separate-outputs": true,
-    "max-lenght": 50
+    "max-lenght": 50,
+    "tooltip": false
   },
 
   "clock": {
@@ -72,9 +75,7 @@
     "format-muted": "",
     "format-icons": {
       "default": [
-        "",
-        "",
-        ""
+        ""
       ]
     },
     "tooltip": false,
@@ -90,9 +91,9 @@
   },
 
   "network#icon": {
-    "format-wifi": "󰖩",
+    "format-wifi": "",
     "format-ethernet": "",
-    "format-disconnected": "󰖪",
+    "format-disconnected": "",
     "tooltip": false
   },
 

@@ -1,9 +1,12 @@
 configuration {
- font: "Hack Nerd Font Mono 12";
  show-icons: false;
- scroll-method: 0;
+ location: 0;
+ font: "Hack Nerd Font Mono 12";
+ display-drun: "";
  disable-history: true;
  sidebar-mode: false;
+ hover-select: false;
+ scroll-method: 0;
 }
 
 @import "dracula.rasi"

@@ -1,10 +1,23 @@
 # Aliases
 
-alias reboot='systemctl reboot'
+# Clear
+alias c='clear'
 
-alias ls='eza -ahl --color=always --group-directories-first'
+# Fastfetch
+alias nf='fastfetch'
+alias ff='fastfetch'
+alias pf='fastfetch'
+
+# Core utilities
+alias ls='eza -a --tree --level=1 --color=always --icons=always --group-directories-first'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 
-alias ff='fastfetch'
+# Power managment
+alias shutdown='systemctl poweroff'
+alias reboot='systemctl reboot'
+
+# Neovim
+alias v='$EDITOR'
+alias vim='$EDITOR'

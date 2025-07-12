@@ -5,6 +5,8 @@ configuration {
  font: "Hack Nerd Font Mono 12";
  display-drun: "";
  drun-display-format: "{name}";
+ disable-history: true;
+ hover-select: false;
 }
 
 @import "dracula.rasi"
