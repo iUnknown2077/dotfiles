@@ -1,0 +1,194 @@
+@import "colors.css";
+@define-color backgroundlight @color12;
+@define-color backgrounddark #FFFFFF;
+@define-color workspacesbackground1 @color12;
+@define-color workspacesbackground2 #FFFFFF;
+@define-color bordercolor @color11;
+@define-color textcolor1 @color12;
+@define-color textcolor2 #FFFFFF;
+@define-color textcolor3 #FFFFFF;
+@define-color iconcolor #FFFFFF;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 97%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.75);
+    border-bottom: 0px solid #ffffff;
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#taskbar,
+#workspaces {
+    background: @workspacesbackground1;
+    margin: 2px 18px 3px 1px;
+    padding: 0px 2px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    color: @textcolor1;
+}
+
+#taskbar button,
+#workspaces button {
+    padding: 0px 6px;
+    margin: 3px 2px;
+    border-radius: 3px 3px 3px 3px;
+    color: @textcolor1;
+    background-color: @workspacesbackground2;
+    transition: all 0.1s linear;
+    opacity: 0.4;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    color: @textcolor1;
+    background: @workspacesbackground2;
+    border-radius: 3px 3px 3px 3px;
+    min-width: 30px;
+    transition: all 0.1s linear;
+    opacity: 1.0;
+}
+
+#taskbar button.hover,
+#workspaces button:hover {
+    color: @textcolor1;
+    background: @workspacesbackground2;
+    border-radius: 5px 5px 5px 5px;
+    opacity: 0.7;
+}
+
+tooltip {
+    border-radius: 10px;
+    background-color: @backgroundlight;
+    opacity: 0.9;
+    padding: 5px;
+    margin: 0px;
+}
+
+tooltip label {
+    color: @textcolor2;
+}
+
+#window {
+    margin: 3px 15px 3px 0px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px 5px 5px 5px;
+    color: @white;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.8;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+}
+
+window#waybar.empty #window {
+    background-color:transparent;
+}
+
+#taskbar.empty {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#custom-menu,
+#window
+#pulseaudio,
+#network,
+#tray,
+#clock {
+    padding: 2px;
+    margin-right: 8px;
+    margin-left: 6px;
+    font-size: 100%;
+    opacity: 0.8;
+    color: @iconcolor;
+}
+
+#custom-menu {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 2px 17px 2px 0px;
+    opacity: 0.8;
+    border: 3px solid @bordercolor;
+}
+
+#pulseaudio {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 15px 3px 0px;
+    opacity: 0.8;
+}
+
+#pulseaudio.muted {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+}
+
+#network {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 15px 3px 0px;
+    opacity: 0.8;
+}
+
+#network.ethernet {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+}
+
+#network.wifi {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+}
+
+#tray {
+    padding: 0px 15px 0px 0px;
+    background-color: @backgroundlight;
+    color: @textcolor2;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 15px 3px 0px;
+    opacity: 0.8;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#clock {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+    border-radius: 3px 5px 3px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 0px 3px 0px;
+    opacity: 0.8;
+    border: 3px solid @bordercolor;
+}

@@ -1,0 +1,5 @@
+# Prompt theme
+eval "$(starship init bash)"
+
+# Colors
+export TERM="xterm-256color"

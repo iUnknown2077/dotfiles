@@ -1,0 +1,27 @@
+# Aliases
+
+# Clear
+alias c='clear'
+
+# Fastfetch
+alias nf='fastfetch'
+alias ff='fastfetch'
+alias pf='fastfetch'
+
+# Core utilities
+alias ls='eza -a --tree --level=1 --icons=always --group-directories-first'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+# Power managment
+alias shutdown='systemctl poweroff'
+alias reboot='systemctl reboot'
+
+# Neovim
+alias v='$EDITOR'
+alias vim='$EDITOR'
+
+# Dotfiles
+alias conf='cd ~/dotfiles/.config/ && ls'
+alias theme='matugen image ~/.config/hypr/wallpaper.png -m "dark" && wallust run ~/.config/hypr/wallpaper.png && killall -SIGUSR2 waybar'

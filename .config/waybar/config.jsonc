@@ -1,0 +1,132 @@
+{
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 3,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-left": 6,
+  "margin-right": 6,
+  "margin-top": 0,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "custom/separator",
+    "custom/menu",
+    "custom/separator",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "tray",
+    "custom/separator",
+    "clock",
+    "custom/separator"
+  ],
+
+  "custom/separator#blank": {
+    "format": "",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/menu": {
+    "format": "Apps",
+    "on-click": "pkill rofi || rofi -show drun",
+    "on-click-right": "~/.config/rofi/powermenu.sh",
+    "tooltip": true,
+    "tooltip-format": "Arch based btw"
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "icon": true,
+    "icon-size": 12,
+    "rewrite": {
+      "brave-browser": "Brave $1",
+      "discord": "Discord $1",
+      "kitty": "Kitty $1",
+      "signal": "Signal $1",
+      "pcmanfm-qt": "PCManFM $1"
+    },
+    "separate-outputs": true,
+    "max-length": 25,
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "show-special": false,
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "  {volume} %",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "on-click": "pavucontrol-qt",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+
+  "network": {
+    "interval": 1,
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip": true,
+    "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
+  },
+
+  "tray": {
+    "icon-multipler": 1.6,
+    "spacing": 4,
+    "show-passive-items": true,
+    "tooltip": false
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip": false,
+    "return-type": "json",
+    /* Notifications */
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}

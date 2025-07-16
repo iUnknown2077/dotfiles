@@ -1,0 +1,10 @@
+backend = "kmeans"
+palette = "dark16"
+threshold = 10
+
+[templates]
+kitty.template = 'kitty-colors.conf'
+kitty.target = '~/.config/kitty/colors-wallust.conf'
+
+waybar.template = 'waybar-colors.css'
+waybar.target = '~/.config/waybar/colors.css'
