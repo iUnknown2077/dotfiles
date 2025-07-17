@@ -15,11 +15,11 @@
     "custom/separator",
     "custom/menu",
     "custom/separator",
-    "hyprland/workspaces"
+    "hyprland/window"
   ],
 
   "modules-center": [
-    "hyprland/window"
+    "hyprland/workspaces"
   ],
 
   "modules-right": [
@@ -72,7 +72,7 @@
     "on-scroll-down": "hyprctl dispatch workspace e+1",
     "show-special": false,
     "persistent-workspaces": {
-      "*": 5
+      "*": 10
     },
     "format-icons": {
       "1": "一",
