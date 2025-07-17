@@ -43,7 +43,7 @@ window {
     border-color:                @color11;
     border-radius:               10px;
     background-color:            @background;
-    location:                    north west;
+    location:                    north east;
 }
 
 mainbox {
@@ -52,8 +52,7 @@ mainbox {
     padding:                     0em;
     orientation:                 horizontal;
     children:                    [ "listbox" ];
-    background-color:            @background;
-    background-image:            url("~/dotfiles/.config/hypr/wallpaper.png", width);
+    background-color:            @color5;
 }
 
 /* ---- Imagebox ---- */

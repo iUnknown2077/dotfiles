@@ -1,102 +1,104 @@
-@import "colors.css";
-@define-color backgroundlight @color12;
+/* Themes */
+
+@import "colors-matugen.css";
+@import "colors-wallust.css";
+
+@define-color backgroundlight #FFFFFF;
 @define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 @color12;
-@define-color workspacesbackground2 #FFFFFF;
-@define-color bordercolor @color11;
-@define-color textcolor1 @color12;
-@define-color textcolor2 #FFFFFF;
+@define-color workspacesbackground1 #FFFFFF;
+@define-color workspacesbackground2 #CCCCCC;
+@define-color bordercolor #FFFFFF;
+@define-color textcolor1 #000000;
+@define-color textcolor2 #000000;
 @define-color textcolor3 #FFFFFF;
 @define-color iconcolor #FFFFFF;
 
+/* General */
+
 * {
     font-family: "JetBrainsMono Nerd Font";
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
-    min-height: 0;
     font-size: 97%;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.75);
-    border-bottom: 0px solid #ffffff;
-    background: transparent;
+    background-color: @background25;
+    border-bottom: 1px solid @workspacesbackground2;
+    border-radius: 0px;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-#taskbar,
+/* Workspaces */
+
 #workspaces {
-    background: @workspacesbackground1;
-    margin: 2px 18px 3px 1px;
-    padding: 0px 2px;
-    border-radius: 5px 5px 5px 5px;
+    margin: 0px 1px 1px 1px;
+    padding: 0px 1px;
+    border-radius: 5px;
+    border: 0px;
     font-weight: bold;
     font-style: normal;
-    opacity: 0.8;
     color: @textcolor1;
 }
 
-#taskbar button,
 #workspaces button {
-    padding: 0px 6px;
-    margin: 3px 2px;
-    border-radius: 3px 3px 3px 3px;
-    color: @textcolor1;
-    background-color: @workspacesbackground2;
-    transition: all 0.1s linear;
-    opacity: 0.4;
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 5px;
+    border: 0px;
+    color: @textcolor3;
+    transition: all 0.3s ease-in-out;
 }
 
-#taskbar button.active,
 #workspaces button.active {
     color: @textcolor1;
     background: @workspacesbackground2;
-    border-radius: 3px 3px 3px 3px;
-    transition: all 0.1s linear;
-    opacity: 1.0;
+    border-radius: 5px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
-#taskbar button.hover,
 #workspaces button:hover {
     color: @textcolor1;
     background: @workspacesbackground2;
-    border-radius: 5px 5px 5px 5px;
-    opacity: 0.7;
+    border-radius: 5px;
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
+/* Tooltips */
+
 tooltip {
-    border-radius: 10px;
-    background-color: @backgroundlight;
-    opacity: 0.9;
+    border-radius: 5px;
+    background-color: @backgrounddark;
+    opacity: 0.75;
     padding: 5px;
     margin: 0px;
 }
 
 tooltip label {
-    color: @textcolor2;
+    color: @textcolor1;
 }
 
+/* Window */
+
 #window {
-    margin: 3px 15px 3px 0px;
+    background: @backgroundlight;
+    margin: 5px 15px 5px 0px;
     padding: 0px 10px 0px 10px;
-    border-radius: 5px 5px 5px 5px;
-    color: @white;
+    border-radius: 5px;
+    color: @textcolor2;
     font-weight: normal;
-    opacity: 0.8;
-    text-shadow: 0px 0px 8px rgba(0,0,0,0.3);
 }
 
 window#waybar.empty #window {
-    background-color:transparent;
+    background-color: transparent;
 }
 
-#taskbar.empty {
-    background: transparent;
-    border: 0;
-    padding: 0;
-    margin: 0;
-}
+/* Modules */
 
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
@@ -106,37 +108,46 @@ window#waybar.empty #window {
     margin-right: 0;
 }
 
-#custom-menu,
-#window
+/* Other */
+
+#network,
+#pulseaudio,
+#clock {
+    margin-right: 20px;
+    font-weight: bold;
+    color: @iconcolor;
+    padding: 2px 10px 2px 10px;
+}
+
+#tray,
+#workspaces,
 #pulseaudio,
 #network,
-#tray,
-#clock {
-    padding: 2px;
-    margin-right: 8px;
-    margin-left: 6px;
-    font-size: 100%;
-    opacity: 0.8;
+#clock,
+#custom-menu {
+    padding-right: 6px;
+    padding-left: 6px;
     color: @iconcolor;
 }
 
-#custom-menu {
-    background-color: @backgrounddark;
-    color: @textcolor1;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 2px 17px 2px 0px;
-    opacity: 0.8;
-    border: 3px solid @bordercolor;
+#tray {
+    margin: 5px 10px 5px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
 }
 
 #pulseaudio {
     background-color: @backgroundlight;
     color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.8;
+    border-radius: 5px;
+    margin: 5px 10px 5px 0px;
 }
 
 #pulseaudio.muted {
@@ -147,10 +158,8 @@ window#waybar.empty #window {
 #network {
     background-color: @backgroundlight;
     color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.8;
+    border-radius: 5px;
+    margin: 5px 10px 5px 0px;
 }
 
 #network.ethernet {
@@ -163,30 +172,26 @@ window#waybar.empty #window {
     color: @textcolor2;
 }
 
-#tray {
-    padding: 0px 15px 0px 0px;
-    background-color: @backgroundlight;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity: 0.8;
+#network {
+    background-color: #2980b9;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+#network.disconnected {
+    background-color: #f53c3c;
 }
 
 #clock {
     background-color: @backgrounddark;
     color: @textcolor1;
-    border-radius: 3px 5px 3px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 3px 0px 3px 0px;
-    opacity: 0.8;
-    border: 3px solid @bordercolor;
+    border-radius: 5px;
+    margin: 5px 2px 5px 0px;
+}
+
+#custom-menu {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+    border-radius: 5px;
+    margin: 5px 10px 5px 10px;
+    padding-right: 6px;
+    padding-left: 4px;
 }

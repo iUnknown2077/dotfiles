@@ -1,0 +1,9 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+@define-color background75 {{colors.surface.default.rgba | set_alpha: 0.75}};
+@define-color background25 {{colors.surface.default.rgba | set_alpha: 0.25}};
+<* for name, value in colors *>
+    @define-color {{name}} {{value.default.hex}};
+<* endfor *>

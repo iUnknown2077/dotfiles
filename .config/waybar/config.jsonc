@@ -6,15 +6,14 @@
   "spacing": 3,
   "fixed-center": true,
   "ipc": true,
-  "margin-left": 6,
-  "margin-right": 6,
+  "margin-left": 0,
+  "margin-right": 0,
   "margin-top": 0,
   "margin-bottom": 0,
+  "height": 34,
 
   "modules-left": [
-    "custom/separator",
-    "custom/menu",
-    "custom/separator",
+    "tray",
     "hyprland/window"
   ],
 
@@ -24,33 +23,22 @@
 
   "modules-right": [
     "pulseaudio",
-    "custom/separator",
     "network",
-    "custom/separator",
-    "tray",
-    "custom/separator",
     "clock",
-    "custom/separator"
+    "custom/menu"
   ],
 
-  "custom/separator#blank": {
-    "format": "",
-    "interval": "once",
+  "tray": {
+    "format": "{icon}",
+    "icon-multipler": 1.6,
+    "spacing": 4,
     "tooltip": false
-  },
-
-  "custom/menu": {
-    "format": "Apps",
-    "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "~/.config/rofi/powermenu.sh",
-    "tooltip": true,
-    "tooltip-format": "Arch based btw"
   },
 
   "hyprland/window": {
     "format": "{class}",
     "icon": true,
-    "icon-size": 12,
+    "icon-size": 18,
     "rewrite": {
       "brave-browser": "Brave $1",
       "discord": "Discord $1",
@@ -58,22 +46,22 @@
       "signal": "Signal $1",
       "pcmanfm-qt": "PCManFM $1"
     },
-    "separate-outputs": true,
     "max-length": 25,
+    "separate-outputs": true,
     "tooltip": false
   },
 
   "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "format": "{icon}",
-    "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
     "show-special": false,
     "persistent-workspaces": {
       "*": 10
     },
+    "format": "{icon}",
     "format-icons": {
       "1": "一",
       "2": "二",
@@ -90,7 +78,7 @@
 
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-muted": "  {volume} %",
+    "format-muted": "  {volume}%",
     "format-icons": [
       "",
       "",
@@ -110,23 +98,24 @@
     "tooltip-format": " {bandwidthDownBits}  {bandwidthUpBits}"
   },
 
-  "tray": {
-    "icon-multipler": 1.6,
-    "spacing": 4,
-    "show-passive-items": true,
-    "tooltip": false
-  },
-
   "clock": {
     "interval": 1,
     "format": "{:%a %d %b %H:%M}",
     "tooltip": false,
-    "return-type": "json",
     /* Notifications */
+    "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+
+  "custom/menu": {
+    "format": "Apps",
+    "on-click": "pkill rofi || rofi -show drun",
+    "on-click-right": "~/.config/rofi/powermenu.sh",
+    "tooltip": true,
+    "tooltip-format": "Arch based btw"
   }
 }

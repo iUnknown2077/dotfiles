@@ -52,8 +52,7 @@ mainbox {
     padding:                     0em;
     orientation:                 horizontal;
     children:                    [ "listbox" ];
-    background-color:            transparent;
-    background-image:            url("~/dotfiles/.config/hypr/wallpaper.png", width);
+    background-color:            @color5;
 }
 
 /* ---- Imagebox ---- */
