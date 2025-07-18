@@ -1,5 +1,3 @@
-/* by Stephan Raabe, small changes by iUnknown2077 */
-
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,filebrowser,run,window";
