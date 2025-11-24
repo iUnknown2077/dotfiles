@@ -8,7 +8,7 @@
   },
   "logo": {
     "type": "auto",
-    /* "source": "/home/wiktor/dotfiles/fastfetch/arch.png", */
+    "source": "arch3",
     "padding": {
       "right": 1
     },
