@@ -21,5 +21,5 @@ alias themes="~/.config/rofi/themes.sh"
 
 
 ### Prompt ###
-# export PS1='[\u@\h \W]\$ '
-eval "$(starship init bash)"
+export PS1="\u@\h \w \\$ "
+# eval "$(starship init bash)"
