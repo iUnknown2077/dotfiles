@@ -17,6 +17,7 @@ alias grep="rg --color=auto"
 
 alias ff="fastfetch"
 
+alias themes="~/.config/rofi/themes.sh"
 
 ### Prompt ###
 # export PS1='[\u@\h \W]\$ '
