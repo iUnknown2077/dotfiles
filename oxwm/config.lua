@@ -18,7 +18,7 @@ oxwm.set_layout_symbol("normie", "")
 
 -- Border configuration
 oxwm.border.set_width(2)
-oxwm.border.set_focused_color(colors.orange1)
+oxwm.border.set_focused_color(colors.accent1)
 oxwm.border.set_unfocused_color(colors.bgh)
 
 -- Gap configuration
@@ -32,7 +32,7 @@ oxwm.bar.set_font(bar_font)
 -- Color Scheme
 oxwm.bar.set_scheme_normal(colors.fg, colors.bgh, "#444444")
 oxwm.bar.set_scheme_occupied(colors.fg, colors.bgh, colors.bg)
-oxwm.bar.set_scheme_selected(colors.orange1, colors.bgh, colors.bg)
+oxwm.bar.set_scheme_selected(colors.accent1, colors.bgh, colors.bg)
 
 -- Keybindings
 
