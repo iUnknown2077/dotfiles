@@ -1,5 +1,6 @@
 ### Export ###
 export MANPAGER="nvim +Man!"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 PATH=$PATH:$HOME/.cargo/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -16,8 +17,8 @@ alias ...="cd ../.."
 alias grep="rg --color=auto"
 
 alias ff="fastfetch"
-
 alias themes="~/.config/rofi/themes.sh"
+
 
 ### Prompt ###
 # export PS1='[\u@\h \W]\$ '

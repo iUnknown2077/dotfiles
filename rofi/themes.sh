@@ -36,7 +36,7 @@ fi
 
 cp "$dunst_themes/$choice" "$dunst/dunstrc"
 cp "$fastfetch_themes/$choice.jsonc" "$fastfetch/config.jsonc"
-cp "$kitty_themes/$choice.conf" "$kitty/current_theme.conf"
+cp "$kitty_themes/$choice.conf" "$kitty/current-theme.conf"
 cp "$nvim_themes/$choice.lua" "$nvim/colors.lua"
 cp "$oxwm_themes/$choice.lua" "$oxwm/colors.lua"
 cp "$rofi_themes/$choice.rasi" "$rofi/config.rasi"
