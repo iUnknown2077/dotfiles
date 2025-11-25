@@ -17,9 +17,9 @@ alias ...="cd ../.."
 alias grep="rg --color=auto"
 
 alias ff="fastfetch"
-alias themes="~/.config/rofi/themes.sh"
+alias themes="~/.config/scripts/themes.sh"
+alias powermenu="~/.config/scripts/powermenu.sh"
 
 
 ### Prompt ###
 export PS1="\u@\h \w \\$ "
-# eval "$(starship init bash)"
