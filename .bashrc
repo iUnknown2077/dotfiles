@@ -14,9 +14,11 @@ alias dots="nvim ~/dotfiles"
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias grep="rg --color=auto"
 
 alias ff="fastfetch"
+
 alias themes="~/.config/scripts/themes.sh"
 alias powermenu="~/.config/scripts/powermenu.sh"
 

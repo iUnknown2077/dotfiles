@@ -1,6 +1,13 @@
 return {
-  {
-    -- Show CSS Colors
+  { -- This helps with ssh tunneling and copying to clipboard
+    'ojroques/vim-oscyank',
+  },
+
+  { -- Show historical versions of the file locally
+    'mbbill/undotree',
+  },
+
+  { -- Show CSS Colors
     'brenoprata10/nvim-highlight-colors',
     config = function()
       require('nvim-highlight-colors').setup({})

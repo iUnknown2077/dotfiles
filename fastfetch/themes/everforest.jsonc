@@ -49,7 +49,7 @@
       "type": "command",
       "key": " 󰔠",
       "keyColor": "yellow",
-      "text": "echo $(~/.config/fastfetch/progress.sh)",
+      "text": "echo $(~/.config/scripts/progress.sh)",
       "shell": "/usr/bin/bash"
     },
     "break",
