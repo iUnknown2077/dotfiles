@@ -17,6 +17,7 @@ rofi_themes="$HOME/.config/rofi/themes"
 
 
 declare -a options=(
+  "catppuccin-latte"
   "everforest"
   "gruvbox"
   "tokyonight"
@@ -32,10 +33,14 @@ if [ "$choice" = 'quit' ]; then
     exit
 fi
 
-
 cp "$dunst_themes/$choice" "$dunst/dunstrc"
 cp "$fastfetch_themes/$choice.jsonc" "$fastfetch/config.jsonc"
 cp "$kitty_themes/$choice.conf" "$kitty/current-theme.conf"
 cp "$nvim_themes/$choice.lua" "$nvim/colors.lua"
 cp "$oxwm_themes/$choice.lua" "$oxwm/colors.lua"
 cp "$rofi_themes/$choice.rasi" "$rofi/config.rasi"
+
+killall dunst && dunst &
+feh --bg-scale --randomize $HOME/.config/feh/wallpapers/*
+notify-send "$choice"
+killall kitty && kitty &
