@@ -80,16 +80,16 @@
 [urgency_low]
     background = "#1e2326"
     foreground = "#d3c6aa"
-    frame_color = "#a7c080"
+    frame_color = "#d3c6aa"
     timeout = 10
-    highlight = "#a7c080"
+    highlight = "#d3c6aa"
 
 [urgency_normal]
     background = "#1e2326"
     foreground = "#d3c6aa"
-    frame_color = "#a7c080"
+    frame_color = "#d3c6aa"
     timeout = 10
-    highlight = "#a7c080"
+    highlight = "#d3c6aa"
 
 [urgency_critical]
     background = "#1e2326"

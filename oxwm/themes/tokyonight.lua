@@ -14,6 +14,6 @@ return {
   magenta1 = "#bb9af7",
   cyan0 = "#7dcfff",
   cyan1 = "#7dcfff",
-  accent0 = "#7dcfff",
-  accent1 = "#7dcfff",
+  accent0 = "#33ccff",
+  accent1 = "#00ff99",
 }

@@ -20,6 +20,7 @@ declare -a options=(
   "catppuccin-latte"
   "everforest"
   "gruvbox"
+  "nord"
   "tokyonight"
   "quit"
   )
@@ -42,5 +43,5 @@ cp "$rofi_themes/$choice.rasi" "$rofi/config.rasi"
 
 killall dunst && dunst &
 feh --bg-scale --randomize $HOME/.config/feh/wallpapers/*
+kitty @ load-config
 notify-send "$choice"
-killall kitty && kitty &

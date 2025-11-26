@@ -12,7 +12,7 @@
       "right": 1
     },
     "color": {
-      "1": "#a7c080",
+      "1": "#d3c6aa",
       "2": "white"
     }
   },
@@ -20,10 +20,10 @@
     {
       "type": "title",
       "key": " ",
-      "keyColor": "#a7c080",
+      "keyColor": "#d3c6aa",
       "color": {
         "user": "white",
-        "at": "#a7c080",
+        "at": "#d3c6aa",
         "host": "white"
       }
     },
