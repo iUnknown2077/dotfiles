@@ -19,10 +19,10 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #282828;
-  fg: #ebdbb2;
-  selected: #fe8019;
-  accent: #1d2021;
+  bg: #;
+  fg: #;
+  selected: #;
+  accent: #;
   background-color: @bg;
 
   color: @fg;
@@ -54,6 +54,7 @@ element selected {
 
 element-text selected {
   background-color: @selected;
+  text-color: @bg;
 }
 
 element-icon selected {

@@ -20,7 +20,7 @@ configuration {
 
 * {
   bg: #1a1b26;
-  fg: #c0caf5;
+  fg: #cfc9c2;
   selected: #7dcfff;
   accent: #16161e;
   background-color: @bg;

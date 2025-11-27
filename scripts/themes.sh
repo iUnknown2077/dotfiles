@@ -21,6 +21,7 @@ declare -a options=(
   "everforest"
   "gruvbox"
   "nord"
+  "osaka-jade"
   "tokyonight"
   "quit"
   )

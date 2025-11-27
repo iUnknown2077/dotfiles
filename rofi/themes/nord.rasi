@@ -21,7 +21,7 @@ configuration {
 * {
   bg: #3b4252;
   fg: #d8dee9;
-  selected: #d8dee9;
+  selected: #88c0d0;
   accent: #2e3440;
   background-color: @bg;
 
