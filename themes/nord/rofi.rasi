@@ -1,6 +1,6 @@
 configuration {
   modi: "drun";
-  font: "Maple Mono NF 10";
+  font: "Maple Mono NF 9";
   show-icons: true;
   terminal: "kitty";
   icon-theme: "Papirus-Dark";

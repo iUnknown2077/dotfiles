@@ -2,7 +2,7 @@
 --@module 'oxwm'
 
 local colors = require("colors");
-local bar_font = "Maple Mono NF:style=Bold:size=11"
+local bar_font = "Maple Mono NF:style=Bold:size=12"
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9", }
 local modkey = "Mod4"
 
