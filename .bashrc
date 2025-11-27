@@ -6,7 +6,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 ### Aliases ###
-alias ls="eza -a --icons"
+alias ls="eza -l --icons"
+alias la="eza -a --icons"
 alias ll="eza -la --icons"
 
 alias pacsyu="sudo pacman -Syu"

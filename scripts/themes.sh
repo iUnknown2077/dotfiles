@@ -7,11 +7,14 @@ oxwm="$HOME/.config/oxwm/"
 rofi="$HOME/.config/rofi/"
 
 declare -A themes=(
-  ["catppuccin-latte"]="$HOME/.config/themes/catppuccin-latte"
+  ["catppuccin-mocha"]="$HOME/.config/themes/catppuccin-mocha"
   ["everforest"]="$HOME/.config/themes/everforest"
   ["gruvbox"]="$HOME/.config/themes/gruvbox"
+  ["kanagawa"]="$HOME/.config/themes/kanagawa"
   ["nord"]="$HOME/.config/themes/nord"
   ["osaka-jade"]="$HOME/.config/themes/osaka-jade"
+  ["oxocarbon"]="$HOME/.config/themes/oxocarbon"
+  ["ristretto"]="$HOME/.config/themes/ristretto"
   ["tokyonight"]="$HOME/.config/themes/tokyonight"
   )
 
@@ -20,15 +23,18 @@ declare -A targets=(
   ["kitty.conf"]="$kitty/current-theme.conf"
   ["nvim.lua"]="$nvim/colors.lua"
   ["oxwm.lua"]="$oxwm/colors.lua"
-  ["rofi.rasi"]="$rofi/config.rasi"
+  ["rofi.rasi"]="$rofi/colors.rasi"
   )
 
 declare -a options=(
-  "catppuccin-latte"
+  "catppuccin-mocha"
   "everforest"
   "gruvbox"
+  "kanagawa"
   "nord"
   "osaka-jade"
+  "oxocarbon"
+  "ristretto"
   "tokyonight"
   "quit"
   )

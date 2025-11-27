@@ -6,7 +6,7 @@ return {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
-        flavour = "latte",
+        flavour = "mocha",
       })
       vim.cmd.colorscheme "catppuccin"
       enable_transparency()
