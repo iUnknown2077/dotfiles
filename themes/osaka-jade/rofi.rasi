@@ -2,5 +2,5 @@
   bg: #111C18;
   fg: #ebfff2;
   selected: #e1b55e;
-  accent: #11221C;
+  accent: #e1b55e;
 }
