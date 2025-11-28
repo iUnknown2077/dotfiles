@@ -1,10 +1,13 @@
 -- Variables
 local colors = require("colors");
-local bar_font = "Maple Mono NF:style=Bold:size=10"
+local font = "Maple Mono NF:style=Bold:size=10"
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9", }
 
 -- Basic Settings
 oxwm.set_tags(tags)
+
+-- Bar configuration
+oxwm.bar.set_font(font)
 
 -- Status
 -- bar

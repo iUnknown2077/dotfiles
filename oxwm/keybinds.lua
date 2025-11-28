@@ -36,7 +36,7 @@ oxwm.key.bind({ modkey }, "J", oxwm.client.focus_direction("down"))
 oxwm.key.bind({ modkey }, "K", oxwm.client.focus_direction("up"))
 oxwm.key.bind({ modkey }, "L", oxwm.client.focus_direction("right"))
 
--- Multi-monitor support
+-- Monitor focus
 oxwm.key.bind({ modkey }, "Comma", oxwm.focus_monitor(-1))
 oxwm.key.bind({ modkey }, "Period", oxwm.focus_monitor(1))
 

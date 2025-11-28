@@ -32,6 +32,9 @@ alias ff="fastfetch"
 alias themes="~/.config/scripts/themes.sh"
 alias powermenu="~/.config/scripts/powermenu.sh"
 
+alias add="git add ."
+alias commit="git commit -m"
+alias push="git push"
 
 # Prompt
 export PS1="\u@\h \w \\$ "
