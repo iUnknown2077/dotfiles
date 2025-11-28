@@ -55,7 +55,7 @@ for file in "${!targets[@]}"; do
   if [[ -f "$src" ]]; then
     cp "$src" "$dst"
   else
-    echo "Brak pliku $src"
+    echo "File $src not found"
   fi
 done
 
