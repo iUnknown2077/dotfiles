@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+alacritty="$HOME/.config/alacritty/"
 dunst="$HOME/.config/dunst/"
 kitty="$HOME/.config/kitty/"
 nvim="$HOME/.config/nvim/lua/plugins/"
@@ -19,6 +20,7 @@ declare -A themes=(
   )
 
 declare -A targets=(
+  ["alacritty.toml"]="$alacritty/colors.toml"
   ["dunstrc"]="$dunst/dunstrc"
   ["kitty.conf"]="$kitty/current-theme.conf"
   ["nvim.lua"]="$nvim/colors.lua"

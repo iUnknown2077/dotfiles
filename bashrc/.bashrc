@@ -9,12 +9,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export MANPAGER="nvim +Man!"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 
-export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE="ls:ll:cd:pwd:exit:clear:history"
-
-export EDITOR="nvim"
-export VISUAL"$EDITOR"
-
 
 # List directory contents
 alias ls="eza -l --icons"

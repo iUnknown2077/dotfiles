@@ -3,9 +3,9 @@ local function enable_transparency()
 end
 return {
   {
-    "rebelot/kanagawa.nvim",
+    "neanias/everforest-nvim",
     config = function()
-      vim.cmd.colorscheme "kanagawa"
+      vim.cmd.colorscheme "everforest"
       enable_transparency()
     end
   },
@@ -15,7 +15,7 @@ return {
       'nvim-tree/nvim-web-devicons'
     },
     opts = {
-      theme = 'kanagawa',
+      theme = 'everforest',
     }
   }
 }
