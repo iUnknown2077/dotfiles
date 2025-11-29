@@ -32,9 +32,13 @@ alias ff="fastfetch"
 alias themes="~/.config/scripts/themes.sh"
 alias powermenu="~/.config/scripts/powermenu.sh"
 
-alias add="git add ."
+# The stupid content tracker
+alias addall="git add ."
+alias clone="git clone"
 alias commit="git commit -m"
+alias pull="git pull"
 alias push="git push"
+
 
 # Prompt
 export PS1="\u@\h \w \\$ "
