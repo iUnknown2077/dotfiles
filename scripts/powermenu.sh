@@ -30,5 +30,5 @@ if [ "$choice" = "   Shutdown" ]; then
 fi
 
 if [ "$choice" = "󰜺   Quit" ]; then
-  echo 
+  echo Quit 
 fi

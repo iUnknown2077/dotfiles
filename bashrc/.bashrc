@@ -33,11 +33,11 @@ alias themes="~/.config/scripts/themes.sh"
 alias powermenu="~/.config/scripts/powermenu.sh"
 
 # The stupid content tracker
-alias addall="git add ."
-alias clone="git clone"
-alias commit="git commit -m"
-alias pull="git pull"
-alias push="git push"
+alias ga="git add ."
+alias gcl="git clone"
+alias gcm="git commit -m"
+alias gpl="git pull"
+alias gps="git push"
 
 
 # Prompt

@@ -6,7 +6,7 @@ oxwm.set_layout_symbol("tiling", "󰝘")
 oxwm.set_layout_symbol("normie", "")
 
 -- Border configuration
-oxwm.border.set_width(0)
+oxwm.border.set_width(1)
 oxwm.border.set_focused_color(colors.accent1)
 oxwm.border.set_unfocused_color(colors.bg)
 
