@@ -8,7 +8,7 @@ oxwm.set_modkey(modkey)
 -- Basic window management
 oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "rofi -show drun" }))
-oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "maim ~/Obrazy/$(date +%s).png" }))
+oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "maim ~/Pictures/$(date +%s).png" }))
 oxwm.key.bind({ modkey }, "Q", oxwm.client.kill())
 
 -- Keybind overlay

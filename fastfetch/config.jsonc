@@ -7,7 +7,8 @@
     }
   },
   "logo": {
-    "type": "small",
+    // "type": "small",
+    "source": "arco_small",
     "padding": {
       "right": 1
     },

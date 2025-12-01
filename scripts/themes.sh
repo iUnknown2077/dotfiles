@@ -42,11 +42,11 @@ declare -a options=(
   )
 
 
-choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -l 6 -p 'Themes')
+choice=$(printf '%s\n' "${options[@]}" | fzf)
 
 theme_dir="${themes[$choice]}"
 
-if [ "$choice" = 'quit' ]; then
+if [ "$choice" = "quit" ]; then
     echo "No theme selected"
     exit
 fi

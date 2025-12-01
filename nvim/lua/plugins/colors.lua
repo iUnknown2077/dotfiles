@@ -3,9 +3,12 @@ local function enable_transparency()
 end
 return {
   {
-    "neanias/everforest-nvim",
+    "catppuccin/nvim",
     config = function()
-      vim.cmd.colorscheme "everforest"
+      require("catppuccin").setup({
+        flavour = "mocha",
+      })
+      vim.cmd.colorscheme "catppuccin"
       enable_transparency()
     end
   },
@@ -15,7 +18,7 @@ return {
       'nvim-tree/nvim-web-devicons'
     },
     opts = {
-      theme = 'everforest',
+      theme = 'catppuccin',
     }
   }
 }

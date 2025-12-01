@@ -29,8 +29,9 @@ alias grep="rg --color=auto"
 alias ff="fastfetch"
 
 # Shell scripts
-alias themes="~/.config/scripts/themes.sh"
 alias powermenu="~/.config/scripts/powermenu.sh"
+alias shell="~/.config/scripts/shell.sh"
+alias themes="~/.config/scripts/themes.sh"
 
 # The stupid content tracker
 alias ga="git add ."
@@ -41,4 +42,4 @@ alias gps="git push"
 
 
 # Prompt
-export PS1="\u@\h \w \\$ "
+export PS1="%n@%m %~ $ "
