@@ -67,3 +67,6 @@ oxwm.key.bind({ modkey, "Shift" }, "H", oxwm.client.swap_direction("left"))
 oxwm.key.bind({ modkey, "Shift" }, "J", oxwm.client.swap_direction("down"))
 oxwm.key.bind({ modkey, "Shift" }, "K", oxwm.client.swap_direction("up"))
 oxwm.key.bind({ modkey, "Shift" }, "L", oxwm.client.swap_direction("right"))
+
+-- Custom
+oxwm.key.bind({ modkey }, "B", oxwm.spawn({ "sh", "-c", "./.config/scripts/bookmarks.sh" }))

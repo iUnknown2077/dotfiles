@@ -10,8 +10,7 @@ declare -a options=(
 )
 
 
-choice=$(printf '%s\n' "${options[@]}" | fzf)
-
+choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 
 if [ "$choice" = "  Lock" ]; then
   slock

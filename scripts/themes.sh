@@ -42,7 +42,7 @@ declare -a options=(
   )
 
 
-choice=$(printf '%s\n' "${options[@]}" | fzf)
+choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 
 theme_dir="${themes[$choice]}"
 

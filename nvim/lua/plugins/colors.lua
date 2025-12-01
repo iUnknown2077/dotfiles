@@ -3,12 +3,9 @@ local function enable_transparency()
 end
 return {
   {
-    "catppuccin/nvim",
+    "loctvl842/monokai-pro.nvim",
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
-      })
-      vim.cmd.colorscheme "catppuccin"
+      vim.cmd.colorscheme "monokai-pro"
       enable_transparency()
     end
   },
@@ -18,7 +15,7 @@ return {
       'nvim-tree/nvim-web-devicons'
     },
     opts = {
-      theme = 'catppuccin',
+      theme = 'monokai-pro',
     }
   }
 }
