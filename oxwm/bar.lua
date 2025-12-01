@@ -40,10 +40,17 @@ oxwm.bar.set_blocks({
     color = colors.bgh,
     underline = false
   }),
+--  oxwm.bar.block.shell({
+--    command = "uname -r",
+--    format = " {}",
+--    interval = 999999999,
+--    color = colors.fg,
+--    underline = false
+--  }),
   oxwm.bar.block.shell({
-    command = "uname -r",
-    format = " {}",
-    interval = 999999999,
+    command = "pamixer --get-volume",
+    format = "  {}",
+    interval = 1,
     color = colors.fg,
     underline = false
   }),
