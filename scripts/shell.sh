@@ -10,18 +10,17 @@ declare -a options=(
 
 choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 
-if [ "$choice" = "Bash" ]; then
-  chsh -s /bin/bash
-fi
-
-if [ "$choice" = "Zsh" ]; then
-  chsh -s /bin/zsh
-fi
-
-if [ "$choice" = "Fish" ]; then
-  chsh -s /bin/fish
-fi
-
-if [ "$choice" = "Quit" ]; then
-  echo "No shell selected"
-fi
+case $choice in
+  "Bash")
+    chsh -s /bin/bash
+  ;;
+  "Zsh")
+    chsh -s /bin/zsh
+  ;;
+  "Fish")
+    chsh -s /bin/fish
+  ;;
+  "Quit")
+    echo "No shell selected"
+  ;;
+esac

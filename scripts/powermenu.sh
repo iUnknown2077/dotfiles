@@ -12,22 +12,20 @@ declare -a options=(
 
 choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 
-if [ "$choice" = "  Lock" ]; then
-  slock
-fi
-
-if [ "$choice" = "󰩈  Exit" ]; then
-  pkill Xorg
-fi
-
-if [ "$choice" = "  Reboot" ]; then
-  systemctl reboot
-fi
-
-if [ "$choice" = "  Shutdown" ]; then
-  shutdown -h now
-fi
-
-if [ "$choice" = "󰜺  Quit" ]; then
-  echo "No option selected"
-fi
+case $choice in
+  "  Lock")
+    slock
+  ;;
+  "󰩈  Exit")
+    pkill Xorg
+  ;;
+  "  Reboot")
+    systemctl reboot
+  ;;
+  "  Shutdown")
+    shutdown -h now
+  ;;
+  "󰜺  Quit")
+    echo "No option selected"
+  ;;
+esac

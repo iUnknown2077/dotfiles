@@ -9,6 +9,7 @@ rofi="$HOME/.config/rofi/"
 
 declare -A themes=(
   ["catppuccin-mocha"]="$HOME/.config/themes/catppuccin-mocha"
+  ["dracula"]="$HOME/.config/themes/dracula"
   ["everforest"]="$HOME/.config/themes/everforest"
   ["gruvbox"]="$HOME/.config/themes/gruvbox"
   ["kanagawa"]="$HOME/.config/themes/kanagawa"
@@ -30,6 +31,7 @@ declare -A targets=(
 
 declare -a options=(
   "catppuccin-mocha"
+  "dracula"
   "everforest"
   "gruvbox"
   "kanagawa"
