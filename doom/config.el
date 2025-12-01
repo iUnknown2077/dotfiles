@@ -134,7 +134,7 @@
         :n "."   #'dired-create-empty-file
         :n "g ." #'dired-clean-directory))
 
-(defun tony/eshell-here ()
+(defun wiktor/eshell-here ()
   (interactive)
   (let ((default-directory (or (and (buffer-file-name)
         (file-name-directory (buffer-file-name)))
@@ -161,7 +161,7 @@
       (:prefix ("b" . "buffers")
        :desc "Buffer menu" "m" #'ibuffer)
       (:prefix ("t" . "terminal")
-      :desc "Terminal here (eshell)" "o" #'tony/eshell-here)
+      :desc "Terminal here (eshell)" "o" #'wiktor/eshell-here)
 )
 
 (map! :n "gr" #'+lookup/references)
