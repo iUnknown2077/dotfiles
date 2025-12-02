@@ -3,13 +3,13 @@ foreground = "{{colors.on_surface.default.hex}}"
 background = "{{colors.background.default.hex}}"
 
 [colors.normal]
-black   = "#262626"
-red     = "#ac8a8c"
-green   = "#8aac8b"
+black   = "{{colors.on_surface.default.hex}}"
+red     = "{{colors.error.default.hex}}"
+green   = "{{colors.on_surface.default.hex}}"
 yellow  = "#aca98a"
 blue    = "{{colors.primary.default.hex}}"
-magenta = "#ac8aac"
-cyan    = "#8aacab"
+magenta = "{{colors.error.default.hex}}"
+cyan    = "{{colors.on_surface.default.hex}}"
 white   = "#f0f0f0"
 
 [colors.bright]

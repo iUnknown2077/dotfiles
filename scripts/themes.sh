@@ -56,7 +56,10 @@ if [ "$choice" = "quit" ]; then
 fi
 
 $HOME/.config/scripts/random-wallpaper.sh
-matugen image "$HOME/.config/feh/wallpaper.jpg"
+
+if [ "$choice" = "material-you" ]; then
+  matugen image "$HOME/.config/feh/wallpaper.jpg"
+fi
 
 for file in "${!targets[@]}"; do
   src="$theme_dir/$file"

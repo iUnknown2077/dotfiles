@@ -12,19 +12,19 @@ font = Maple Mono NF 9
 format = "<b>%s</b>\n%b"
 
 [urgency_low]
-background =  "#18120c"
-foreground =  "#eee0d4"
-frame_color = "#653e00"
+background  = "#0e1514"
+foreground  = "#dde4e2"
+frame_color = "#889391"
 timeout = 3
 
 [urgency_normal]
-background =  "#18120c"
-foreground =  "#eee0d4"
-frame_color = "#653e00"
+background  = "#0e1514"
+foreground  = "#dde4e2"
+frame_color = "#889391"
 timeout = 5
 
 [urgency_critical]
-background =  "#18120c"
-foreground =  "#eee0d4"
+background  = "#0e1514"
+foreground  = "#dde4e2"
 frame_color = "#ffb4ab"
 timeout = 10
