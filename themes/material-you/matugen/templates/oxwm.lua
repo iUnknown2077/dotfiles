@@ -1,5 +1,5 @@
 return {
-  bgh = "#{{colors.outline_variant.default.hex_stripped}}",
+  bgh = "{{colors.outline_variant.default.hex}}",
   bg  = "{{colors.surface.default.hex}}",
   fg  = "{{colors.on_surface.default.hex}}",
   color1  = "{{colors.error.default.hex}}",
@@ -14,6 +14,6 @@ return {
   color13 = "#c49ec4",
   color6  = "{{colors.on_surface.default.hex}}",
   color14 = "#9ec3c4",
-  accent0 = "#{{colors.outline.default.hex_stripped}}",
-  accent1 = "#{{colors.outline.default.hex_stripped}}",
+  accent0 = "{{colors.outline.default.hex}}",
+  accent1 = "{{colors.outline.default.hex}}",
 }

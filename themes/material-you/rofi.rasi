@@ -1,6 +1,6 @@
 * {
   bg: #0e1514;
-  fg: #dde4e2;
-  selected: #889391;
+  fg: #dde4e3;
+  selected: #889392;
   accent: #3f4948;
 }
