@@ -4,7 +4,7 @@ FIREFOX="$(command -v firefox || true)"
 
 mapfile -t url  < "$HOME/.config/bookmarks.txt"
 
-choice=$(printf '%s\n' "${url[@]}" | rofi -dmenu -i -l 6 -p url)
+choice=$(printf '%s\n' "${url[@]}" | rofi -dmenu -i -l 10 -p url)
 
 if [ "$choice" ]; then
   $FIREFOX "$choice" 2>/dev/null

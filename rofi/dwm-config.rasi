@@ -67,6 +67,6 @@ entry {
 
 listview {
   background-color: @bg;
-  columns: 3;
-  lines: 6;
+  columns: 1;
+  lines: 10;
 }

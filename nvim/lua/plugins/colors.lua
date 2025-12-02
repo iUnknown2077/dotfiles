@@ -3,9 +3,9 @@ local function enable_transparency()
 end
 return {
   {
-    "neanias/everforest-nvim",
+    "ribru17/bamboo.nvim",
     config = function()
-      vim.cmd.colorscheme "everforest"
+      vim.cmd.colorscheme "bamboo"
       enable_transparency()
     end
   },
@@ -15,7 +15,7 @@ return {
       'nvim-tree/nvim-web-devicons'
     },
     opts = {
-      theme = 'everforest',
+      theme = 'bamboo',
     }
   }
 }
