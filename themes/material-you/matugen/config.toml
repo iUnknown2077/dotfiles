@@ -1,0 +1,21 @@
+[config]
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/themes/material-you/alacritty.toml'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunstrc'
+output_path = '~/.config/themes/material-you/dunstrc'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/themes/material-you/kitty.conf'
+
+[templates.oxwm]
+input_path = '~/.config/matugen/templates/oxwm.lua'
+output_path = '~/.config/themes/material-you/oxwm.lua'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/.config/themes/material-you/rofi.rasi'

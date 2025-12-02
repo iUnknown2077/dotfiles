@@ -13,6 +13,7 @@ declare -A themes=(
   ["everforest"]="$HOME/.config/themes/everforest"
   ["gruvbox"]="$HOME/.config/themes/gruvbox"
   ["kanagawa"]="$HOME/.config/themes/kanagawa"
+  ["material-you"]="$HOME/.config/themes/material-you"
   ["nord"]="$HOME/.config/themes/nord"
   ["osaka-jade"]="$HOME/.config/themes/osaka-jade"
   ["oxocarbon"]="$HOME/.config/themes/oxocarbon"
@@ -35,6 +36,7 @@ declare -a options=(
   "everforest"
   "gruvbox"
   "kanagawa"
+  "material-you"
   "nord"
   "osaka-jade"
   "oxocarbon"
@@ -53,6 +55,9 @@ if [ "$choice" = "quit" ]; then
     exit
 fi
 
+$HOME/.config/scripts/random-wallpaper.sh
+matugen image "$HOME/.config/feh/wallpaper.jpg"
+
 for file in "${!targets[@]}"; do
   src="$theme_dir/$file"
   dst="${targets[$file]}"
@@ -64,6 +69,5 @@ for file in "${!targets[@]}"; do
 done
 
 killall dunst && dunst &
-feh --bg-scale --randomize $HOME/.config/feh/wallpapers/*
 kitty @ load-config
 notify-send "$choice"

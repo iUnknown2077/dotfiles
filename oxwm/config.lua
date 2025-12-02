@@ -38,27 +38,36 @@ oxwm.key.chord({
   { {}, "T" }
 }, oxwm.spawn("alacritty"))
 
+-- Basic window management
 oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "rofi -show drun" }))
 oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "maim ~/Pictures/$(date +%s).png" }))
 oxwm.key.bind({ modkey }, "Q", oxwm.client.kill())
 
+-- Keybind overlay
 oxwm.key.bind({ modkey, "Shift" }, "Slash", oxwm.show_keybinds())
 
+-- Client actions
 oxwm.key.bind({ modkey, "Shift" }, "F", oxwm.client.toggle_fullscreen())
 oxwm.key.bind({ modkey, "Shift" }, "Space", oxwm.client.toggle_floating())
 
+-- Layout management
 oxwm.key.bind({ modkey }, "F", oxwm.layout.set("normie"))
 oxwm.key.bind({ modkey }, "C", oxwm.layout.set("tiling"))
 oxwm.key.bind({ modkey }, "N", oxwm.layout.cycle())
 
+-- Gaps toggle
 oxwm.key.bind({ modkey }, "A", oxwm.toggle_gaps())
 
+-- WM controls
 oxwm.key.bind({ modkey, "Shift" }, "Q", oxwm.quit())
 oxwm.key.bind({ modkey, "Shift" }, "R", oxwm.restart())
 
-oxwm.key.bind({ modkey }, "J", oxwm.client.focus_stack("1"))
-oxwm.key.bind({ modkey }, "K", oxwm.client.focus_stack("-1"))
+-- Focus direction
+oxwm.key.bind({ modkey }, "H", oxwm.client.focus_direction("left"))
+oxwm.key.bind({ modkey }, "J", oxwm.client.focus_direction("down"))
+oxwm.key.bind({ modkey }, "K", oxwm.client.focus_direction("up"))
+oxwm.key.bind({ modkey }, "L", oxwm.client.focus_direction("right"))
 
 -- View tag
 oxwm.key.bind({ modkey }, "1", oxwm.tag.view(0))
@@ -81,6 +90,12 @@ oxwm.key.bind({ modkey, "Shift" }, "6", oxwm.tag.move_to(5))
 oxwm.key.bind({ modkey, "Shift" }, "7", oxwm.tag.move_to(6))
 oxwm.key.bind({ modkey, "Shift" }, "8", oxwm.tag.move_to(7))
 oxwm.key.bind({ modkey, "Shift" }, "9", oxwm.tag.move_to(8))
+
+-- Swap windows in direction
+oxwm.key.bind({ modkey, "Shift" }, "H", oxwm.client.swap_direction("left"))
+oxwm.key.bind({ modkey, "Shift" }, "J", oxwm.client.swap_direction("down"))
+oxwm.key.bind({ modkey, "Shift" }, "K", oxwm.client.swap_direction("up"))
+oxwm.key.bind({ modkey, "Shift" }, "L", oxwm.client.swap_direction("right"))
 
 -- Custom
 oxwm.key.bind({ modkey }, "B", oxwm.spawn({ "sh", "-c", "./.config/scripts/bookmarks.sh" }))
@@ -140,6 +155,6 @@ oxwm.bar.set_font(font)
 
 -- Autostart commands
 oxwm.autostart("picom")
-oxwm.autostart("feh --bg-scale --randomize ~/.config/feh/wallpapers/*")
+oxwm.autostart("feh --bg-scale ~/.config/feh/wallpaper.jpg")
 oxwm.autostart("dunst")
 oxwm.autostart("nm-applet")

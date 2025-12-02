@@ -1,0 +1,6 @@
+* {
+  bg: {{colors.surface.default.hex}};
+  fg: {{colors.on_surface.default.hex}};
+  selected: {{colors.primary_container.default.hex}};
+  accent: #262626;
+}

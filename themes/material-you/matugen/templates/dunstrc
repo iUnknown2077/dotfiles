@@ -1,0 +1,30 @@
+[global]
+monitor = 0
+follow = keyboard
+width = 500
+height = 300
+frame_width = 1
+offset = 10x50
+padding = 15
+horizontal_padding = 15
+transparency = 0
+font = Maple Mono NF 9
+format = "<b>%s</b>\n%b"
+
+[urgency_low]
+background =  "{{colors.surface.default.hex}}"
+foreground =  "{{colors.on_surface.default.hex}}"
+frame_color = "{{colors.primary_container.default.hex}}"
+timeout = 3
+
+[urgency_normal]
+background =  "{{colors.surface.default.hex}}"
+foreground =  "{{colors.on_surface.default.hex}}"
+frame_color = "{{colors.primary_container.default.hex}}"
+timeout = 5
+
+[urgency_critical]
+background =  "{{colors.surface.default.hex}}"
+foreground =  "{{colors.on_surface.default.hex}}"
+frame_color = "{{colors.error.default.hex}}"
+timeout = 10
