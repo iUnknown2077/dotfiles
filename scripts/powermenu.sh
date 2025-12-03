@@ -23,7 +23,7 @@ case $choice in
     systemctl reboot
   ;;
   "  Shutdown")
-    shutdown -h now
+    systemctl poweroff
   ;;
   "󰜺  Quit")
     echo "No option selected"

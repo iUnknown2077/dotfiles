@@ -24,12 +24,18 @@ oxwm.border.set_unfocused_color(colors.bg)
 
 -- Gap configuration
 oxwm.gaps.set_enabled(true)
+oxwm.gaps.set_smart(false)
 oxwm.gaps.set_inner(5, 5)
 oxwm.gaps.set_outer(5, 5)
 
--- Color Scheme
+
+-- Window Rules
+oxwm.rule.add({ instance = "firefox", tag = 2 })
+oxwm.rule.add({ instance = "dev.vencord.Vesktop", tag = 3 })
+
+-- Color scheme
 oxwm.bar.set_scheme_normal(colors.fg, colors.bg, "#444444")
-oxwm.bar.set_scheme_occupied(colors.fg, colors.bg, colors.bgh)
+oxwm.bar.set_scheme_occupied(colors.fg, colors.bg, colors.fg)
 oxwm.bar.set_scheme_selected(colors.accent1, colors.bg, colors.bgh)
 
 -- Keychords
@@ -38,36 +44,39 @@ oxwm.key.chord({
   { {}, "T" }
 }, oxwm.spawn("alacritty"))
 
--- Basic window management
 oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "rofi -show drun" }))
 oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "maim ~/Pictures/$(date +%s).png" }))
 oxwm.key.bind({ modkey }, "Q", oxwm.client.kill())
 
--- Keybind overlay
 oxwm.key.bind({ modkey, "Shift" }, "Slash", oxwm.show_keybinds())
 
--- Client actions
 oxwm.key.bind({ modkey, "Shift" }, "F", oxwm.client.toggle_fullscreen())
 oxwm.key.bind({ modkey, "Shift" }, "Space", oxwm.client.toggle_floating())
 
--- Layout management
 oxwm.key.bind({ modkey }, "F", oxwm.layout.set("normie"))
 oxwm.key.bind({ modkey }, "C", oxwm.layout.set("tiling"))
 oxwm.key.bind({ modkey }, "N", oxwm.layout.cycle())
 
--- Gaps toggle
 oxwm.key.bind({ modkey }, "A", oxwm.toggle_gaps())
 
--- WM controls
+-- Master area controls
+oxwm.key.bind({ modkey }, "BracketLeft", oxwm.set_master_factor(-5))
+oxwm.key.bind({ modkey }, "BracketRight", oxwm.set_master_factor(5))
+oxwm.key.bind({ modkey }, "I", oxwm.inc_num_master(1))
+oxwm.key.bind({ modkey }, "P", oxwm.inc_num_master(-1))
+
+-- Multi-monitor controls (dwm-style)
+oxwm.key.bind({ modkey }, "Comma", oxwm.monitor.focus(-1))
+oxwm.key.bind({ modkey }, "Period", oxwm.monitor.focus(1))
+oxwm.key.bind({ modkey, "Shift" }, "Comma", oxwm.monitor.tag(-1))
+oxwm.key.bind({ modkey, "Shift" }, "Period", oxwm.monitor.tag(1))
+
 oxwm.key.bind({ modkey, "Shift" }, "Q", oxwm.quit())
 oxwm.key.bind({ modkey, "Shift" }, "R", oxwm.restart())
 
--- Focus direction
-oxwm.key.bind({ modkey }, "H", oxwm.client.focus_direction("left"))
-oxwm.key.bind({ modkey }, "J", oxwm.client.focus_direction("down"))
-oxwm.key.bind({ modkey }, "K", oxwm.client.focus_direction("up"))
-oxwm.key.bind({ modkey }, "L", oxwm.client.focus_direction("right"))
+oxwm.key.bind({ modkey }, "J", oxwm.client.focus_stack(1))
+oxwm.key.bind({ modkey }, "K", oxwm.client.focus_stack(-1))
 
 -- View tag
 oxwm.key.bind({ modkey }, "1", oxwm.tag.view(0))
@@ -91,16 +100,35 @@ oxwm.key.bind({ modkey, "Shift" }, "7", oxwm.tag.move_to(6))
 oxwm.key.bind({ modkey, "Shift" }, "8", oxwm.tag.move_to(7))
 oxwm.key.bind({ modkey, "Shift" }, "9", oxwm.tag.move_to(8))
 
--- Swap windows in direction
-oxwm.key.bind({ modkey, "Shift" }, "H", oxwm.client.swap_direction("left"))
-oxwm.key.bind({ modkey, "Shift" }, "J", oxwm.client.swap_direction("down"))
-oxwm.key.bind({ modkey, "Shift" }, "K", oxwm.client.swap_direction("up"))
-oxwm.key.bind({ modkey, "Shift" }, "L", oxwm.client.swap_direction("right"))
+-- Toggle view
+-- dwm-style multi-tag viewing
+oxwm.key.bind({ modkey, "Control" }, "1", oxwm.tag.toggleview(0))
+oxwm.key.bind({ modkey, "Control" }, "2", oxwm.tag.toggleview(1))
+oxwm.key.bind({ modkey, "Control" }, "3", oxwm.tag.toggleview(2))
+oxwm.key.bind({ modkey, "Control" }, "4", oxwm.tag.toggleview(3))
+oxwm.key.bind({ modkey, "Control" }, "5", oxwm.tag.toggleview(4))
+oxwm.key.bind({ modkey, "Control" }, "6", oxwm.tag.toggleview(5))
+oxwm.key.bind({ modkey, "Control" }, "7", oxwm.tag.toggleview(6))
+oxwm.key.bind({ modkey, "Control" }, "8", oxwm.tag.toggleview(7))
+oxwm.key.bind({ modkey, "Control" }, "9", oxwm.tag.toggleview(8))
+
+-- Toggle tag
+-- dwm-style sticky windows
+oxwm.key.bind({ modkey, "Control", "Shift" }, "1", oxwm.tag.toggletag(0))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "2", oxwm.tag.toggletag(1))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "3", oxwm.tag.toggletag(2))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "4", oxwm.tag.toggletag(3))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "5", oxwm.tag.toggletag(4))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "6", oxwm.tag.toggletag(5))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "7", oxwm.tag.toggletag(6))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
+oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
 -- Custom
 oxwm.key.bind({ modkey }, "B", oxwm.spawn({ "sh", "-c", "./.config/scripts/bookmarks.sh" }))
+oxwm.bar.set_font(font)
 
-oxwm.bar.set_blocks({
+local blocks = {
   oxwm.bar.block.shell({
     command = "cat /sys/class/power_supply/BAT1/capacity",
     format = " {}%",
@@ -149,12 +177,13 @@ oxwm.bar.set_blocks({
     underline = false,
     date_format = "%a, %b %d - %H:%M"
   }),
-})
+}
 
-oxwm.bar.set_font(font)
+oxwm.bar.set_blocks(blocks)
 
 -- Autostart commands
 oxwm.autostart("picom")
 oxwm.autostart("feh --bg-scale ~/.config/feh/wallpaper.jpg")
 oxwm.autostart("dunst")
 oxwm.autostart("nm-applet")
+oxwm.autostart("/usr/bin/emacs --daemon &")
