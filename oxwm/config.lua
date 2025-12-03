@@ -140,7 +140,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bg,
+    color = colors.accent1,
     underline = false
   }),
   oxwm.bar.block.ram({
@@ -153,7 +153,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bg,
+    color = colors.accent1,
     underline = false
   }),
   oxwm.bar.block.shell({
@@ -167,7 +167,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bg,
+    color = colors.accent1,
     underline = false
   }),
   oxwm.bar.block.datetime({

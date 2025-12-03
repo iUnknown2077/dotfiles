@@ -2,10 +2,24 @@
 
 FIREFOX="$(command -v firefox || true)"
 
-mapfile -t url  < "$HOME/.config/bookmarks.txt"
+mapfile -t bookmarks < "$HOME/.config/bookmarks.txt"
 
-choice=$(printf '%s\n' "${url[@]}" | rofi -dmenu -i -l 10 -p url)
+names=()
+urls=()
+for bookmark in "${bookmarks[@]}"; do
+  name="${bookmark%%=*}"
+  url="${bookmark#*=}"
+  names+=("$name")
+  urls+=("$url")
+done
+
+choice=$(printf '%s\n' "${names[@]}" | rofi -dmenu -config ~/.config/rofi/bookmarks.rasi -i -l 10 -p Bookmarks)
 
 if [ "$choice" ]; then
-  $FIREFOX "$choice" 2>/dev/null
+  for i in "${!names[@]}"; do
+    if [ "${names[$i]}" = "$choice" ]; then
+      $FIREFOX "${urls[$i]}" 2>/dev/null
+      break
+    fi
+  done
 fi

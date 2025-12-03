@@ -9,7 +9,6 @@ declare -a options=(
   "󰜺  Quit"
 )
 
-
 choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 
 case $choice in

@@ -2,7 +2,6 @@
 
 dunst="$HOME/.config/dunst/"
 kitty="$HOME/.config/kitty/"
-nvim="$HOME/.config/nvim/lua/plugins/"
 oxwm="$HOME/.config/oxwm/"
 rofi="$HOME/.config/rofi/"
 
@@ -10,12 +9,17 @@ declare -A themes=(
   ["catppuccin-mocha"]="$HOME/.config/themes/catppuccin-mocha"
   ["decay-green"]="$HOME/.config/themes/decay-green"
   ["edge-runner"]="$HOME/.config/themes/edge-runner"
+  ["graphite-mono"]="$HOME/.config/themes/graphite-mono"
+  ["gruvbox-retro"]="$HOME/.config/themes/gruvbox-retro"
+  ["nordic-blue"]="$HOME/.config/themes/nordic-blue"
+  ["rose-pine"]="$HOME/.config/themes/rose-pine"
+  ["synth-wave"]="$HOME/.config/themes/synth-wave"
+  ["tokyo-night"]="$HOME/.config/themes/tokyo-night"
   )
 
 declare -A targets=(
   ["dunstrc"]="$dunst/dunstrc"
   ["kitty.conf"]="$kitty/current-theme.conf"
-  ["nvim.lua"]="$nvim/colors.lua"
   ["oxwm.lua"]="$oxwm/colors.lua"
   ["rofi.rasi"]="$rofi/colors.rasi"
   )
@@ -24,8 +28,14 @@ declare -a options=(
   "catppuccin-mocha"
   "decay-green"
   "edge-runner"
+  "graphite-mono"
+  "gruvbox-retro"
+  "nordic-blue"
+  "rose-pine"
+  "synth-wave"
+  "tokyo-night"
+  "quit"
   )
-
 
 choice=$(printf '%s\n' "${options[@]}" | fzf --reverse)
 

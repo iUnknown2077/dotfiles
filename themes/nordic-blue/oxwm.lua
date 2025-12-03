@@ -1,0 +1,18 @@
+return {
+  bg  = "#2E3440",
+  fg  = "#D8DEE9",
+  color1  = "#BF616A",
+  color9  = "#BF616A",
+  color2  = "#A3BE8C",
+  color10 = "#A3BE8C",
+  color3  = "#EBCB8B",
+  color11 = "#EBCB8B",
+  color4  = "#81A1C1",
+  color12 = "#81A1C1",
+  color5  = "#B48EAD",
+  color13 = "#B48EAD",
+  color6  = "#88C0D0",
+  color14 = "#8FBCBB",
+  accent0 = "#ECD3A0",
+  accent1 = "#5A9ACA",
+}
