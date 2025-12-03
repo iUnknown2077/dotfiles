@@ -18,6 +18,7 @@ alias ll="eza -la --icons"
 
 # Package manager utility
 alias pacsyu="sudo pacman -Syu"
+alias parsua="paru -Sua --noconfirm"
 alias dots="nvim ~/dotfiles"
 
 # Change the working directory
