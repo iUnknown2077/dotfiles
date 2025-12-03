@@ -36,7 +36,7 @@ oxwm.rule.add({ instance = "dev.vencord.Vesktop", tag = 3 })
 -- Color scheme
 oxwm.bar.set_scheme_normal(colors.fg, colors.bg, "#444444")
 oxwm.bar.set_scheme_occupied(colors.fg, colors.bg, colors.fg)
-oxwm.bar.set_scheme_selected(colors.accent1, colors.bg, colors.bgh)
+oxwm.bar.set_scheme_selected(colors.accent1, colors.bg, colors.accent0)
 
 -- Keychords
 oxwm.key.chord({
@@ -140,7 +140,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bgh,
+    color = colors.bg,
     underline = false
   }),
   oxwm.bar.block.ram({
@@ -153,7 +153,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bgh,
+    color = colors.bg,
     underline = false
   }),
   oxwm.bar.block.shell({
@@ -167,7 +167,7 @@ local blocks = {
     format = " |  ",
     text = "",
     interval = 999999999,
-    color = colors.bgh,
+    color = colors.bg,
     underline = false
   }),
   oxwm.bar.block.datetime({

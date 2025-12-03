@@ -1,5 +1,4 @@
 return {
-  bgh = "#",
   bg  = "#",
   fg  = "#",
   color1  = "#",

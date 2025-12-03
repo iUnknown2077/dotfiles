@@ -3,19 +3,22 @@ local function enable_transparency()
 end
 return {
   {
-    "",
-    config = function()
-      vim.cmd.colorscheme ""
-      enable_transparency()
-    end
-  },
-  {
     'nvim-lualine/lualine.nvim',
-    dependencies = {
+    dependencies =  {
       'nvim-tree/nvim-web-devicons'
     },
     opts = {
-      theme = '',
-    }
+      options = {
+        theme = 'auto'
+      }
+    },
+    config = function(_, opts)
+      require("lualine").setup(opts)
+      enable_transparency()
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "*",
+        callback = enable_transparency
+      })
+    end
   }
 }

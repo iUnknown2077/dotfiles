@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-alacritty="$HOME/.config/alacritty/"
 dunst="$HOME/.config/dunst/"
 kitty="$HOME/.config/kitty/"
 nvim="$HOME/.config/nvim/lua/plugins/"
@@ -9,20 +8,11 @@ rofi="$HOME/.config/rofi/"
 
 declare -A themes=(
   ["catppuccin-mocha"]="$HOME/.config/themes/catppuccin-mocha"
-  ["dracula"]="$HOME/.config/themes/dracula"
-  ["everforest"]="$HOME/.config/themes/everforest"
-  ["gruvbox"]="$HOME/.config/themes/gruvbox"
-  ["kanagawa"]="$HOME/.config/themes/kanagawa"
-  ["material-you"]="$HOME/.config/themes/material-you"
-  ["nord"]="$HOME/.config/themes/nord"
-  ["osaka-jade"]="$HOME/.config/themes/osaka-jade"
-  ["oxocarbon"]="$HOME/.config/themes/oxocarbon"
-  ["ristretto"]="$HOME/.config/themes/ristretto"
-  ["tokyonight"]="$HOME/.config/themes/tokyonight"
+  ["decay-green"]="$HOME/.config/themes/decay-green"
+  ["edge-runner"]="$HOME/.config/themes/edge-runner"
   )
 
 declare -A targets=(
-  ["alacritty.toml"]="$alacritty/colors.toml"
   ["dunstrc"]="$dunst/dunstrc"
   ["kitty.conf"]="$kitty/current-theme.conf"
   ["nvim.lua"]="$nvim/colors.lua"
@@ -32,17 +22,8 @@ declare -A targets=(
 
 declare -a options=(
   "catppuccin-mocha"
-  "dracula"
-  "everforest"
-  "gruvbox"
-  "kanagawa"
-  "material-you"
-  "nord"
-  "osaka-jade"
-  "oxocarbon"
-  "ristretto"
-  "tokyonight"
-  "quit"
+  "decay-green"
+  "edge-runner"
   )
 
 
@@ -56,10 +37,6 @@ if [ "$choice" = "quit" ]; then
 fi
 
 $HOME/.config/scripts/random-wallpaper.sh
-
-if [ "$choice" = "material-you" ]; then
-  matugen image "$HOME/.config/feh/wallpaper.jpg"
-fi
 
 for file in "${!targets[@]}"; do
   src="$theme_dir/$file"
