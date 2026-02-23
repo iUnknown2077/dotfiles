@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,
+  "modules-left": [
+    "ext/workspaces",
+    "dwl/window#layout",
+    "dwl/window#title"
+  ],
+  "modules-right": [
+    "custom/kernel",
+    "memory",
+    "clock#calendar",
+    "clock#time",
+  ],
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": false,
+    "on-click": "activate",
+    "sort-by-id": true,
+    "tooltip": false
+  },
+  "dwl/window#layout": {
+    "format": "[{layout}]",
+    "tooltip": false
+  },
+  "dwl/window#title": {
+    "format": "{title}",
+    "max-length": 32,
+    "tooltip": false
+  },
+  "custom/kernel": {
+    "exec": "uname -r",
+    "interval": 0,
+    "format": "  {}",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {used}/{total} GB",
+    "tooltip": false
+  },
+  "clock#calendar": {
+    "format": "  {:%Y %B %d}",
+    "tooltip": false
+  },
+  "clock#time": {
+    "format": "  {:%H:%M}",
+    "tooltip": false
+  },
+}
