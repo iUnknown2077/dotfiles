@@ -1,0 +1,30 @@
+[global]
+monitor = 0
+follow = keyboard
+width = 500
+height = 300
+frame_width = 1
+offset = 10x50
+padding = 15
+horizontal_padding = 15
+transparency = 0
+font = JetBrainsMono Nerd Font 10
+format = "<b>%s</b>\n%b"
+
+[urgency_low]
+background  = "#282828"
+foreground  = "#ebdbb2"
+frame_color = "#458588"
+timeout = 3
+
+[urgency_normal]
+background  = "#282828"
+foreground  = "#ebdbb2"
+frame_color = "#458588"
+timeout = 3
+
+[urgency_critical]
+background  = "#282828"
+foreground  = "#ebdbb2"
+frame_color = "#cc241d"
+timeout = 10
