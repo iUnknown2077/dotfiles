@@ -7,14 +7,14 @@ dotfiles_git="https://github.com/iUnknown2077/dotfiles.git"
 dotfiles="$HOME/dotfiles/"
 config="$HOME/.config/"
 
-echo "Installing native packages"
-#paru -S --needed --noconfirm $(<"$packages")
+echo "Installing packages"
+paru -S --needed --noconfirm $(<"$packages")
 
 echo "Installing flatpacks"
-#flatpak install -y $(<"$flatpaks")
+flatpak install -y $(<"$flatpaks")
 
 echo "Creating XDG directories"
-#xdg-user-dirs-update
+xdg-user-dirs-update
 
 cd "$HOME/Pobrane/"
 git clone "$dotfiles_git"
