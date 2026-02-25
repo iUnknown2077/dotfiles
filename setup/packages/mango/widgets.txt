@@ -1,6 +1,0 @@
-rofi
-swayidle
-sway-audio--idle-inhibit-git
-swaylock-effects-git
-swayosd
-wlogout

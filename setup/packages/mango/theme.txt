@@ -1,3 +1,0 @@
- bibata-cursor-theme-bin
- papirus-icon-theme
- phocus-gtk-theme-git

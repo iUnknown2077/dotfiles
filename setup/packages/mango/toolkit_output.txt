@@ -1,4 +1,0 @@
-upower
-wtype
-ydotool
-wlr-dpms
