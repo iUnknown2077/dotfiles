@@ -1,0 +1,6 @@
+bluedevil
+gnome-keyring
+networkmanageer
+xfce-polkit
+pcmanfm
+nwg-look

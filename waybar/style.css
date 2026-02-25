@@ -1,13 +1,13 @@
-@define-color bg      #282828;
-@define-color fg      #ebdbb2;
-@define-color black   #3c3836;
-@define-color red     #cc241d;
-@define-color green   #98971a;
-@define-color yellow  #d79921;
-@define-color blue    #458588;
-@define-color magenta #b16286;
-@define-color cyan    #689d6a;
-@define-color white   #a89984;
+@define-color bg      #161616;
+@define-color fg      #ffffff;
+@define-color black   #262626;
+@define-color red     #ee5396;
+@define-color yellow  #42be65;
+@define-color green   #ffe97b;
+@define-color blue    #33b1ff;
+@define-color magenta #ff7eb6;
+@define-color cyan    #3ddbd9;
+@define-color white   #dde1e6;
 
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;

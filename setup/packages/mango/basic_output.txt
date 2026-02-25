@@ -1,0 +1,7 @@
+xdg-user-dirs
+rofi
+kitty
+waybar
+swaybg
+dunst
+wlr-randr

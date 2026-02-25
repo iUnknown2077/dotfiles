@@ -1,12 +1,12 @@
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
+  -- add oxocarbon
+  { "nyoom-engineering/oxocarbon.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load oxocarbon
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "oxocarbon",
     },
   },
 }

@@ -1,15 +1,15 @@
 * {
-  background-color:           #282828;
-  border-color:               #458588;
-  text-color:                 #ebdbb2;
+  background-color:           #161616;
+  border-color:               #33b1ff;
+  text-color:                 #ffffff;
   height:                     24px;
   font:                       "JetBrainsMono Nerd Font 10";
   prompt-font:                "JetBrainsMono Nerd Font 10"";
-  prompt-background:          #458588;
-  prompt-foreground:          #282828;
+  prompt-background:          #33b1ff;
+  prompt-foreground:          #161616;
   prompt-padding:             2px 6px;
-  selected-normal-background: #458588;
-  selected-normal-foreground: #ebdbb2;
+  selected-normal-background: #33b1ff;
+  selected-normal-foreground: #ffffff;
 }
 #window {
   anchor: north;

@@ -12,19 +12,19 @@ font = JetBrainsMono Nerd Font 10
 format = "<b>%s</b>\n%b"
 
 [urgency_low]
-background  = "#282828"
-foreground  = "#ebdbb2"
-frame_color = "#458588"
+background  = "#161616"
+foreground  = "#ffffff"
+frame_color = "#33b1ff"
 timeout = 3
 
 [urgency_normal]
-background  = "#282828"
-foreground  = "#ebdbb2"
-frame_color = "#458588"
+background  = "#161616"
+foreground  = "#ffffff"
+frame_color = "#33b1ff"
 timeout = 3
 
 [urgency_critical]
-background  = "#282828"
-foreground  = "#ebdbb2"
-frame_color = "#cc241d"
+background  = "#161616"
+foreground  = "#ffffff"
+frame_color = "#ee5396"
 timeout = 10

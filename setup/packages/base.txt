@@ -1,0 +1,17 @@
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+networkmanager
+git
+vim
+neovim
+curl
+wget
+htop
+btop
+man-db
+man-pages
+openssh
+sudo

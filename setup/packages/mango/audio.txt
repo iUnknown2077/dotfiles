@@ -1,0 +1,6 @@
+cava
+pavucontrol
+wireplumber
+pipewire-pulse
+pipewire
+pamixer
