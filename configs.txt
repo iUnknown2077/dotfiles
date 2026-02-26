@@ -1,6 +1,5 @@
 dunst|.config/dunst
 fastfetch|.config/fastfetch
-fish/config.fish|.config/fish
 kitty|.config/kitty
 mango|.config/mango
 nvim|.config/nvim

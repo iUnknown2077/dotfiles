@@ -24,6 +24,7 @@ audio=(
 clip=(
   "cliphist"
   "grim"
+  "maim"
   "slurp"
   "wl-clipboard"
   "wl-clip-persist"
@@ -44,6 +45,7 @@ themes=(
   "bibata-cursor-theme-bin"
   "papirus-icon-theme"
   "phocus-gtk-theme-git"
+  "picom"
 )
 
 # Fonts
