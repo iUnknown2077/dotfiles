@@ -10,7 +10,7 @@ local modkey = "Mod4"
 local terminal = "kitty"
 local colors = require("custom-colors");
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
-local bar_font = "JetBrainsMono Nerd Font Propo:style=Bold:size=8"
+local bar_font = "BlexMono Nerd Font Propo:style=Bold:size=10"
 
 --- Status Bar ---
 local blocks = {
@@ -94,7 +94,7 @@ oxwm.bar.set_scheme_normal(colors.white, colors.bg, colors.bg)
 oxwm.bar.set_scheme_occupied(colors.white, colors.bg, colors.bg)
 oxwm.bar.set_scheme_selected(colors.blue, colors.fg, colors.blue)
 
-oxwm.bar.set_hide_vacant_tags(true)
+oxwm.bar.set_hide_vacant_tags(false)
 
 --- Keybindings ---
 
@@ -197,6 +197,6 @@ oxwm.key.chord({
 }, oxwm.spawn_terminal())
 
 --- Autostart ---
--- -- oxwm.autostart("picom")
+oxwm.autostart("picom")
 oxwm.autostart("feh --bg-scale ~/dotfiles/wallpapers/wall-1.png")
 oxwm.autostart("dunst")

@@ -10,7 +10,7 @@
 @define-color white   #dde1e6;
 
 * {
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "BlexMono Nerd Font", monospace;
   font-size: 10px;
   font-weight: bold;
   border-radius: 0;
@@ -26,7 +26,7 @@
 }
 
 #workspaces button {
-  padding: 0 6px;
+  padding: 0 11px;
   color: @white;
   background: @bg;
 }

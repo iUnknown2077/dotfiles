@@ -3,12 +3,12 @@ monitor = 0
 follow = keyboard
 width = 500
 height = 300
-frame_width = 1
+frame_width = 2
 offset = 10x50
 padding = 15
 horizontal_padding = 15
 transparency = 0
-font = JetBrainsMono Nerd Font 10
+font = BlexMono Nerd Font 10
 format = "<b>%s</b>\n%b"
 
 [urgency_low]
