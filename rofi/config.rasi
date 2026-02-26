@@ -4,7 +4,8 @@ configuration {
  show-icons: false;
  terminal: "kitty";
  drun-display-format: "{name}";
- display-drun: " ";
+ /* display-drun: " "; */
+ display-drun: " ";
  timeout {
   action: "kb-cancel";
   delay: 0;

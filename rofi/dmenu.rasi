@@ -5,9 +5,12 @@
   height:                     24px;
   font:                       "JetBrainsMono Nerd Font 10";
   prompt-font:                "JetBrainsMono Nerd Font 10"";
-  prompt-background:          #33b1ff;
+  /* prompt-background:          #33b1ff;
   prompt-foreground:          #161616;
-  prompt-padding:             2px 6px;
+  prompt-padding:             2px 6px; */
+  prompt-background:          #161616;
+  prompt-foreground:          #161616;
+  prompt-padding:             2px 0px;
   selected-normal-background: #33b1ff;
   selected-normal-foreground: #ffffff;
 }
