@@ -1,36 +1,16 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-source $SCRIPT_DIR/pkgs.sh
+if ! command -v pacman >/dev/null 2>&1; then
+  printf "pacman not found. It seems the system is not Arch Linux or an Arch-based distro. Aborting..."
+  exit 1
+fi
 
-_IsInstalled() {
-  package="$1"
-  check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")"
-  if [ -n "${check}" ]; then
-    echo 0
-    return
-  fi
-  echo 1
-  return
-}
+if ! command -v paru >/dev/null 2>&1; then
+  sudo pacman -S --needed base-devel
+  git clone https://aur.archlinux.org/paru.git /tmp/build-paru
+  cd /tmp/build-paru
+  makepkg -si
+  rm -rf /tmp/build-paru
+fi
 
-_InstallPackages() {
-  for pkg; do
-    if [[ $(_IsInstalled "${pkg}") == 0 ]]; then
-      echo ":: ${pkg} is already installed."
-      continue
-    fi
-    paru -S --needed --noconfirm "${pkg}"
-  done
-}
-
-_InstallPackages "${de[@]}"
-_InstallPackages "${audio[@]}"
-_InstallPackages "${clip[@]}"
-_InstallPackages "${xdg[@]}"
-_InstallPackages "${themes[@]}"
-_InstallPackages "${fonts[@]}"
-_InstallPackages "${wayland[@]}"
-_InstallPackages "${other[@]}"
-
-xdg-user-dirs-update
+paru -S --needed $(cat packages.txt | grep -v '^$')

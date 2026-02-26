@@ -16,6 +16,7 @@ wireplumber
 
 cliphist
 grim
+maim
 slurp
 wl-clipboard
 wl-clip-persist
@@ -30,6 +31,7 @@ xdg-user-dirs
 bibata-cursor-theme-bin
 papirus-icon-theme
 phocus-gtk-theme-git
+picom
 
 noto-fonts
 noto-fonts-cjk
