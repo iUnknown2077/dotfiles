@@ -1,6 +1,7 @@
 return {
   bg = "#161616",
   fg = "#ffffff",
+  accent = "#f6a41c",
   black = "#262626",
   red = "#ee5396",
   green = "#42be65",

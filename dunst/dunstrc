@@ -14,13 +14,13 @@ format = "<b>%s</b>\n%b"
 [urgency_low]
 background  = "#161616"
 foreground  = "#ffffff"
-frame_color = "#33b1ff"
+frame_color = "#f6a41c"
 timeout = 3
 
 [urgency_normal]
 background  = "#161616"
 foreground  = "#ffffff"
-frame_color = "#33b1ff"
+frame_color = "#f6a41c"
 timeout = 3
 
 [urgency_critical]

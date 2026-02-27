@@ -1,17 +1,17 @@
 * {
   background-color:           #161616;
-  border-color:               #33b1ff;
+  border-color:               #f6a41c;
   text-color:                 #ffffff;
-  height:                     24px;
-  font:                       "BlexMono Nerd Font 10";
-  prompt-font:                "BlexMono Nerd Font 10"";
-  /* prompt-background:          #33b1ff;
+  height:                     27px;
+  font:                       "BlexMono Nerd Font 12";
+  prompt-font:                "BlexMono Nerd Font 12"";
+  /* prompt-background:          #f6a41c;
   prompt-foreground:          #161616;
-  prompt-padding:             2px 6px; */
+  prompt-padding:             3px 6px; */
   prompt-background:          #161616;
   prompt-foreground:          #161616;
-  prompt-padding:             2px 0px;
-  selected-normal-background: #33b1ff;
+  prompt-padding:             3px 0px;
+  selected-normal-background: #f6a41c;
   selected-normal-foreground: #ffffff;
 }
 #window {
@@ -36,12 +36,12 @@
   lines: 100;
 }
 #entry {
-  padding: 2px;
+  padding: 3px;
   expand: false;
   width: 10em;
 }
 #element {
-  padding: 2px 8px;
+  padding: 3px 8px;
 }
 #element selected {
   background-color: @selected-normal-background;

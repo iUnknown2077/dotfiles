@@ -10,7 +10,7 @@ local modkey = "Mod4"
 local terminal = "alacritty"
 local colors = require("custom-colors");
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
-local bar_font = "BlexMono Nerd Font Propo:style=Bold:size=10"
+local bar_font = "BlexMono Nerd Font Propo:style=Bold:size=12"
 
 --- Status Bar ---
 local blocks = {
@@ -76,7 +76,7 @@ oxwm.set_layout_symbol("scrolling", "[>>]")
 
 --- Appearance ---
 oxwm.border.set_width(2)
-oxwm.border.set_focused_color(colors.blue)
+oxwm.border.set_focused_color(colors.accent)
 oxwm.border.set_unfocused_color(colors.bg)
 
 oxwm.gaps.set_smart(true)
@@ -92,7 +92,7 @@ oxwm.bar.set_blocks(blocks)
 
 oxwm.bar.set_scheme_normal(colors.white, colors.bg, colors.bg)
 oxwm.bar.set_scheme_occupied(colors.white, colors.bg, colors.bg)
-oxwm.bar.set_scheme_selected(colors.blue, colors.fg, colors.blue)
+oxwm.bar.set_scheme_selected(colors.accent, colors.fg, colors.accent)
 
 oxwm.bar.set_hide_vacant_tags(false)
 

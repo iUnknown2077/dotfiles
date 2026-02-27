@@ -1,5 +1,6 @@
 @define-color bg      #161616;
 @define-color fg      #ffffff;
+@define-color accent  #f6a41c;
 @define-color black   #262626;
 @define-color red     #ee5396;
 @define-color green   #42be65;
@@ -11,7 +12,7 @@
 
 * {
   font-family: "BlexMono Nerd Font", monospace;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 0;
   border: none;
@@ -21,7 +22,7 @@
 }
 
 #waybar {
-  background-color: @blue;
+  background-color: @accent;
   color: @bg;
 }
 
@@ -33,7 +34,7 @@
 
 #workspaces button.active {
   color: @bg;
-  background: @blue;
+  background: @accent;
 }
 
 #workspaces button.hidden {
@@ -66,5 +67,5 @@ button:hover {
 #window.title {
   padding: 0 8px;
   color: @bg;
-  background: @blue;
+  background: @accent;
 }
