@@ -1,7 +1,6 @@
 alacritty|.config/alacritty
 dunst|.config/dunst
 fastfetch|.config/fastfetch
-kitty|.config/kitty
 mango|.config/mango
 nvim|.config/nvim
 oxwm|.config/oxwm

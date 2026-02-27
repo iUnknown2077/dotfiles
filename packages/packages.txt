@@ -1,7 +1,6 @@
 alacritty
 dunst
 feh
-kitty
 mangowc-git
 oxwm
 rofi
