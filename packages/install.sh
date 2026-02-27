@@ -14,3 +14,5 @@ if ! command -v paru >/dev/null 2>&1; then
 fi
 
 paru -S --needed $(cat packages.txt | grep -v '^$')
+
+xdg-user-dirs-update

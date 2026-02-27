@@ -7,7 +7,7 @@
 
 --- Variables ---
 local modkey = "Mod4"
-local terminal = "kitty"
+local terminal = "alacritty"
 local colors = require("custom-colors");
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
 local bar_font = "BlexMono Nerd Font Propo:style=Bold:size=10"
