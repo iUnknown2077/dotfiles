@@ -3,8 +3,8 @@
   border-color:               #33b1ff;
   text-color:                 #ffffff;
   height:                     24px;
-  font:                       "JetBrainsMono Nerd Font 10";
-  prompt-font:                "JetBrainsMono Nerd Font 10"";
+  font:                       "BlexMono Nerd Font 10";
+  prompt-font:                "BlexMono Nerd Font 10"";
   /* prompt-background:          #33b1ff;
   prompt-foreground:          #161616;
   prompt-padding:             2px 6px; */
