@@ -25,9 +25,15 @@ alias gpl="git pull"
 alias gps="git push"
 
 # Prompt
-function fish_prompt
+function fish_prompt -d "write out the prompt"
     set_color normal
-    echo -n $USER"@"$hostname" "(prompt_pwd)" \$ "
+    echo -n " 󰇧 "
+    set_color normal
+    echo -n " [ "
+    set_color normal
+    echo -n (prompt_pwd)
+    set_color normal
+    echo -n " ] \$ "
 end
 
 if status is-interactive
