@@ -1,6 +1,3 @@
-[config]
-version_check = false
-
 [templates.discord]
 input_path = '~/.config/matugen/templates/apps/Material-Discord.css'
 output_path = '~/.config/vesktop/themes/Material-Discord.css'
