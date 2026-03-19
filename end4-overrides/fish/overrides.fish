@@ -1,3 +1,4 @@
+# Greeting at start
 source ~/.config/fish/greeting.fish
 
 # Export attribute for variables
