@@ -3,7 +3,7 @@
   "display": {
     "separator": ": ",
     "color": {
-      "keys": "green",
+      "keys": "red",
       "separator": "white",
       "output": "white",
     },
@@ -11,8 +11,8 @@
   "logo": {
     "type": "small",
     "color": {
-      "1": "green",
-      "2": "green",
+      "1": "white",
+      "2": "red",
     },
     "padding": {
       "top": 1,
@@ -22,9 +22,9 @@
     {
       "type": "title",
       "color": {
-        "user": "green",
+        "user": "red",
         "at": "white",
-        "host": "green",
+        "host": "red",
       },
     },
     {
@@ -85,6 +85,9 @@
     {
       "type": "custom",
       "format": "└──────────────────────────────────────────────────────┘"
+    },
+    {
+      "type": "break",
     },
   ],
 }
