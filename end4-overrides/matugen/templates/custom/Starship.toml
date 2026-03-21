@@ -8,7 +8,7 @@ $directory\
 [ ](fg:primary bg:secondary)\
 $git_branch\
 $git_status\
-[ ](fg:secondary bg:black)\
+[ ](fg:secondary bg:surface_container_low)\
 $character\
 """
 
@@ -21,6 +21,7 @@ primary = "{{colors.primary.default.hex}}"
 on_primary = "{{colors.on_primary.default.hex}}"
 secondary = "{{colors.secondary.default.hex}}"
 on_secondary = "{{colors.on_secondary.default.hex}}"
+surface_container_low = "{{colors.surface_container_low.default.hex}}"
 
 [username]
 show_always = true

@@ -3,16 +3,16 @@
   "display": {
     "separator": ": ",
     "color": {
-      "keys": "#b1d18a",
-      "separator": "#e2e3d8",
-      "output": "#e2e3d8",
+      "keys": "red",
+      "separator": "white",
+      "output": "white",
     },
   },
   "logo": {
     "type": "small",
     "color": {
-      "1": "#e2e3d8",
-      "2": "#b1d18a",
+      "1": "white",
+      "2": "red",
     },
     "padding": {
       "top": 1,
@@ -22,9 +22,9 @@
     {
       "type": "title",
       "color": {
-        "user": "#b1d18a",
-        "at": "#e2e3d8",
-        "host": "#b1d18a",
+        "user": "red",
+        "at": "white",
+        "host": "red",
       },
     },
     {
@@ -85,9 +85,6 @@
     {
       "type": "custom",
       "format": "└──────────────────────────────────────────────────────┘"
-    },
-    {
-      "type": "break",
     },
   ],
 }
