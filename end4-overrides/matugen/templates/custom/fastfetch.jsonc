@@ -3,16 +3,16 @@
   "display": {
     "separator": ": ",
     "color": {
-      "keys": "#b1d18a",
-      "separator": "#e2e3d8",
-      "output": "#e2e3d8",
+      "keys": "{{colors.primary.default.hex}}",
+      "separator": "{{colors.on_background.default.hex}}",
+      "output": "{{colors.on_background.default.hex}}",
     },
   },
   "logo": {
     "type": "small",
     "color": {
-      "1": "#e2e3d8",
-      "2": "#b1d18a",
+      "1": "{{colors.on_background.default.hex}}",
+      "2": "{{colors.primary.default.hex}}",
     },
     "padding": {
       "top": 1,
@@ -22,9 +22,9 @@
     {
       "type": "title",
       "color": {
-        "user": "#b1d18a",
-        "at": "#e2e3d8",
-        "host": "#b1d18a",
+        "user": "{{colors.primary.default.hex}}",
+        "at": "{{colors.on_background.default.hex}}",
+        "host": "{{colors.primary.default.hex}}",
       },
     },
     {

@@ -1,11 +1,19 @@
 [templates.discord]
-input_path = '~/.config/matugen/templates/apps/Material-Discord.css'
+input_path = '~/.config/matugen/templates/custom/Discord.css'
 output_path = '~/.config/vesktop/themes/Material-Discord.css'
 
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/custom/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
+
 [templates.obsidian]
-input_path = '~/.config/matugen/templates/apps/Material-Obsidian.css'
+input_path = '~/.config/matugen/templates/custom/Obsidian.css'
 output_path = '~/Dokumenty/obsidian/.obsidian/themes/Material-Obsidian.css'
 
+[templates.starship]
+input_path = '~/.config/matugen/templates/custom/Starship.toml'
+output_path = '~/.config/starship.toml'
+
 [templates.zed]
-input_path = '~/.config/matugen/templates/apps/Material-Zed.css'
+input_path = '~/.config/matugen/templates/custom/Zed.css'
 output_path = '~/.config/zed/themes/Material-Zed.css'
