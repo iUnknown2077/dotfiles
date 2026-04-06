@@ -1,6 +1,9 @@
 # Greeting at start
 source ~/.config/fish/greeting.fish
 
+# Exporting variables
+set -U fish_user_paths $PATH $HOME/.local/bin
+
 # Export attribute for variables
 export MANPAGER="nvim +Man!"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
