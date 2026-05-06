@@ -41,4 +41,5 @@
     "light": "Noctalia Light",
     "dark": "Noctalia Dark",
   },
+  "tab_size": 2,
 }
