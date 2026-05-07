@@ -6,12 +6,14 @@
   "project_panel": {
     "dock": "left",
   },
+
   "agent": {
     "dock": "right",
     "flexible": false,
     "favorite_models": [],
     "model_parameters": [],
   },
+
   "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
   "vim_mode": true,
@@ -19,6 +21,7 @@
     "diagnostics": false,
     "metrics": false,
   },
+
   "ui_font_family": "Google Sans Flex",
   "ui_font_size": 16,
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -41,5 +44,6 @@
     "light": "Noctalia Light",
     "dark": "Noctalia Dark",
   },
+
   "tab_size": 2,
 }
