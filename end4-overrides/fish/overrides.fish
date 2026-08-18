@@ -10,9 +10,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
 export EDITOR="nvim"
 
 # List directory contents
-alias ls='eza -l --icons'
-alias la='eza -a --icons'
-alias ll='eza -la --icons'
+alias ls='eza -l --icons=always'
+alias la='eza -a --icons=always'
+alias ll='eza -la --icons=always'
 
 # Change the working directory
 alias ..="cd .."
