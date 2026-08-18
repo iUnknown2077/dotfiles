@@ -1,0 +1,7 @@
+[templates.fastfetch]
+input_path = '~/.config/matugen/templates/custom/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/custom/Starship.toml'
+output_path = '~/.config/starship.toml'
