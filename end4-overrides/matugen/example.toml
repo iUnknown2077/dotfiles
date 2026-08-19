@@ -3,5 +3,5 @@ input_path = '~/.config/matugen/templates/custom/fastfetch.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
 
 [templates.starship]
-input_path = '~/.config/matugen/templates/custom/Starship.toml'
+input_path = '~/.config/matugen/templates/custom/starship.toml'
 output_path = '~/.config/starship.toml'
