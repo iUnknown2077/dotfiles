@@ -9,13 +9,14 @@
     },
   },
   "logo": {
-    "type": "small",
-    "color": {
-      "1": "white",
-      "2": "red",
-    },
+    "type": "kitty-direct",
+    "source": "~/.config/fastfetch/material.png",
+    "width": 28,
+    "height": 14,
     "padding": {
       "top": 1,
+      "right": 1,
+      "left": 0,
     },
   },
   "modules": [

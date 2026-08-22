@@ -15,8 +15,8 @@
     "height": 14,
     "padding": {
       "top": 1,
-      "right": 1,
-      "left": 1,
+      "right": 2,
+      "left": 0,
     },
   },
   "modules": [
