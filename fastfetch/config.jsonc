@@ -11,7 +11,7 @@
   },
   "logo": {
     "type": "kitty-direct",
-    "source": "~/.config/fastfetch/android-17.png",
+    "source": "~/.config/fastfetch/assets/android-17.png",
     "width": 32,
     "height": 16,
     "padding": {
@@ -44,7 +44,7 @@
 
     { "type": "custom", "format": "── SESSION ─────────────────────────────────────────────" },
     { "type": "uptime", "key": "UPTIME", },
-    { "type": "command", "key": "AGE", "text": "echo $(~/.config/fastfetch/progress.sh)", "shell": "/usr/bin/bash", },
+    { "type": "command", "key": "AGE", "text": "echo $(~/.config/fastfetch/assets/progress.sh)", "shell": "/usr/bin/bash", },
     { "type": "terminal", "key": "TERM", },
     "break",
 
