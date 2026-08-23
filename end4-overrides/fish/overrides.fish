@@ -1,5 +1,5 @@
 # Greeting at start
-source ~/.config/fish/greeting.fish
+source ~/.config/fish/scripts/greeting.fish
 
 # Exporting variables
 set -U fish_user_paths $PATH $HOME/.local/bin
