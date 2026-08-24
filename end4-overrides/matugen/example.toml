@@ -1,6 +1,18 @@
+[templates.discord]
+input_path = '~/.config/matugen/templates/custom/discord.css'
+output_path = '~/.config/vesktop/themes/matugen.css'
+
 [templates.fastfetch]
 input_path = '~/.config/matugen/templates/custom/fastfetch.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
+
+[templates.heroic]
+input_path = '~/.config/matugen/templates/custom/heroic.css'
+output_path = '~/.config/heroic/store/styles/matugen.css'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/custom/obsidian.css'
+output_path = '~/Dokumenty/obsidian/.obsidian/snippets/matugen.css'
 
 [templates.starship]
 input_path = '~/.config/matugen/templates/custom/starship.toml'

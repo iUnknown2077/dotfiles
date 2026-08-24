@@ -1,0 +1,146 @@
+body {
+	--radius-s: 7px;
+	--radius-m: 9px;
+	--radius-l: 13px;
+	--radius-xl: 15px;
+	--button-radius: 7px;
+	--modal-radius: 9px;
+	--tab-radius: 9px;
+	--toggle-radius: 20px;
+	--toggle-thumb-radius: 20px;
+	--slider-thumb-radius: 20px;
+    --checkbox-radius: 5px;
+    --tab-font-size: 14px;
+    --divider-width: 2px;
+    --divider-width-hover: 2px;
+    }
+
+.theme-dark {
+    --ribbon-background: {{colors.surface_container.dark.hex}};
+    --ribbon-background-collapsed: {{colors.surface_container.dark.hex}};
+    --scrollbar-thumb-bg: {{colors.secondary.dark.hex}}40;
+    --scrollbar-active-thumb-bg: {{colors.secondary.dark.hex}}60;
+    --titlebar-background: {{colors.background.dark.hex}};
+    --titlebar-background-focused: {{colors.background.dark.hex}};
+    --accent-h: calc({{colors.primary.light.hue}}/255*360);
+    --accent-s: calc({{colors.primary.light.saturation}}/255*100%);
+    --accent-l: calc({{colors.primary.light.lightness}}/255*100%);
+    --toggle-thumb-color: {{colors.primary.dark.hex}};
+    --background-primary: {{colors.surface.dark.hex}};
+    --background-primary-alt: {{colors.surface_container_high.dark.hex}};
+	--background-secondary: {{colors.surface.dark.hex}};
+	--background-secondary-alt: {{colors.surface.dark.hex}};
+	--modal-background: {{colors.surface_container.dark.hex}};
+	--modal-border-color: {{colors.surface.dark.hex}}20;
+	--interactive-normal: {{colors.surface_container.dark.hex}};
+	--interactive-hover: {{colors.surface_container_highest.dark.hex}}
+	--interactive-accent: {{colors.secondary_container.dark.hex}};
+	--interactive-accent-hover: {{colors.secondary_container.dark.hex}};
+	--text-normal: {{colors.on_surface.dark.hex}};
+	--text-muted: {{colors.on_surface_variant.dark.hex}};
+	--text-faint: {{colors.surface_variant.dark.hex}};
+	--text-on-accent: {{colors.primary_container.light.hex}};
+	--text-on-accent-inverted: {{colors.primary.dark.hex}};
+	--text-success: {{colors.tertiary.dark.hex}};
+	--text-error: {{colors.error.dark.hex}};
+	--text-accent: {{colors.primary.dark.hex}};
+	--text-accent-hover: {{colors.primary.dark.hex}};
+	--text-selection: {{colors.secondary_container.dark.hex}};
+	--text-highlight-bg: {{colors.tertiary_container.dark.hex}};
+	--caret-color: {{colors.primary.dark.hex}};
+	--checkbox-border-color: {{colors.primary.dark.hex}};
+	--checklist-done-color: {{colors.secondary.dark.hex}};
+	--blockquote-background-color: {{colors.surface_container.dark.hex}};
+	--blockquote-color: {{colors.secondary.dark.hex}};
+	--embed-background: {{colors.surface_container.dark.hex}};
+	--h1-color: {{colors.primary.dark.hex}};
+	--h2-color: {{colors.primary.dark.hex}};
+	--h3-color: {{colors.primary.dark.hex}};
+	--h4-color: {{colors.primary.dark.hex}};
+	--h5-color: {{colors.primary.dark.hex}};
+	--h6-color: {{colors.primary.dark.hex}};
+	--hr-color: {{colors.secondary.dark.hex}};
+	--link-color: {{colors.primary.dark.hex}};
+	--link-color-hover: {{colors.primary_container.dark.hex}};
+	--divider-color: {{colors.secondary_container.dark.hex}}20;
+	--divider-color-hover: {{colors.secondary_container.dark.hex}}60;
+	--graph-node: {{colors.primary.dark.hex}}60;
+	--graph-node-unresolved: {{colors.secondary.dark.hex}};
+	--graph-node-focused: {{colors.primary.dark.hex}};
+	}
+
+.theme-light {
+    --ribbon-background: {{colors.surface_container.light.hex}};
+    --ribbon-background-collapsed: {{colors.surface_container.light.hex}};
+    --scrollbar-thumb-bg: {{colors.secondary.light.hex}}40;
+    --scrollbar-active-thumb-bg: {{colors.secondary.light.hex}}60;
+    --titlebar-background: {{colors.background.light.hex}};
+    --titlebar-background-focused: {{colors.background.light.hex}};
+    --accent-h: calc({{colors.primary.dark.hue}}/255*360);
+    --accent-s: calc({{colors.primary.dark.saturation}}/255*100%);
+    --accent-l: calc({{colors.primary.dark.lightness}}/255*100%);
+    --toggle-thumb-color: {{colors.primary_container.light.hex}};
+    --background-primary: {{colors.surface.light.hex}};
+    --background-primary-alt: {{colors.surface_container_high.light.hex}};
+    --background-secondary: {{colors.surface.light.hex}};
+    --background-secondary-alt: {{colors.surface.light.hex}};
+    --modal-background: {{colors.surface_container.light.hex}};
+    --modal-border-color: {{colors.surface.light.hex}}20;
+    --interactive-normal: {{colors.surface_container.light.hex}};
+    --interactive-hover: {{colors.surface_container_highest.light.hex}}
+    --interactive-accent: {{colors.secondary_container.light.hex}};
+    --interactive-accent-hover: {{colors.secondary_container.light.hex}};
+    --text-normal: {{colors.on_surface.light.hex}};
+    --text-muted: {{colors.on_surface_variant.light.hex}};
+    --text-faint: {{colors.surface_variant.dark.hex}};
+    --text-on-accent: {{colors.primary_container.light.hex}};
+    --text-on-accent-inverted: {{colors.primary.light.hex}};
+    --text-success: {{colors.tertiary.light.hex}};
+    --text-error: {{colors.error.light.hex}};
+    --text-accent: {{colors.primary.light.hex}};
+    --text-accent-hover: {{colors.primary.light.hex}};
+    --text-selection: {{colors.secondary_container.light.hex}};
+    --text-highlight-bg: {{colors.tertiary_container.light.hex}};
+    --caret-color: {{colors.primary.light.hex}};
+    --checkbox-border-color: {{colors.primary.light.hex}};
+    --checklist-done-color: {{colors.secondary.light.hex}};
+    --blockquote-background-color: {{colors.surface_container.light.hex}};
+    --blockquote-color: {{colors.secondary.light.hex}};
+    --embed-background: {{colors.surface_container.light.hex}};
+    --h1-color: {{colors.primary.light.hex}};
+    --h2-color: {{colors.primary.light.hex}};
+    --h3-color: {{colors.primary.light.hex}};
+    --h4-color: {{colors.primary.light.hex}};
+    --h5-color: {{colors.primary.light.hex}};
+    --h6-color: {{colors.primary.light.hex}};
+    --hr-color: {{colors.secondary.light.hex}};
+    --link-color: {{colors.primary.light.hex}};
+    --link-color-hover: {{colors.primary_container.light.hex}};
+    --divider-color: {{colors.secondary_container.light.hex}}20;
+    --divider-color-hover: {{colors.secondary_container.light.hex}}60;
+    --graph-node: {{colors.primary.light.hex}}60;
+    --graph-node-unresolved: {{colors.secondary.light.hex}};
+    --graph-node-focused: {{colors.primary.light.hex}};
+}
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
