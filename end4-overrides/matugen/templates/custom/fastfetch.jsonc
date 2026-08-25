@@ -1,51 +1,47 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "display": {
-    "separator": " ",
-    "key": { "width": 9 },
-    "color": {
-      "keys": "{{colors.primary.default.hex}}",
-      "separator": "{{colors.on_surface.default.hex}}",
-      "output": "{{colors.on_surface.default.hex}}",
-    },
-  },
   "logo": {
     "type": "kitty-direct",
     "source": "~/.config/fastfetch/assets/android-17.png",
     "width": 32,
     "height": 16,
-    "padding": {
-      "top": 4,
-      "right": 2,
-      "left": 0,
-    },
+    "padding": { "top": 4, "right": 2, "left": 0 },
+  },
+  "display": {
+    "color": { "keys": "{{colors.primary.default.hex}}", "separator": "{{colors.on_surface.default.hex}}", "output": "{{colors.on_surface.default.hex}}" },
+    "key": { "width": 9 },
+    "separator": "  ",
+    "percent": {
+      "type": 9,
+      "color": { "green": "{{colors.primary.default.hex}}", "yellow": "{{colors.secondary.default.hex}}", "red": "{{colors.tertiary.default.hex}}" }
+    }
   },
   "modules": [
     "break",
-    { "type": "title", "format": "{user-name-colored} {at-symbol-colored} {host-name-colored}", "color": { "user": "{{colors.on_surface.default.hex}}", "at": "{{colors.primary.default.hex}}", "host": "{{colors.on_surface.default.hex}}", }, },
-    { "type": "custom", "format": "· Android 17 inspired CachyOS desktop", "outputColor": "{{colors.on_surface_variant.default.hex}}", },
+    { "type": "title", "format": "{user-name-colored} {at-symbol-colored} {host-name-colored}", "color": { "user": "{{colors.on_surface.default.hex}}", "at": "{{colors.primary.default.hex}}", "host": "{{colors.on_surface.default.hex}}" } },
+    { "type": "custom", "format": "· Android 17 inspired CachyOS desktop", "outputColor": "{{colors.on_surface_variant.default.hex}}" },
     "break",
 
     { "type": "custom", "format": "── HARDWARE ────────────────────────────────────────────" },
-    { "type": "cpu", "key": "CPU", },
-    { "type": "gpu", "format": "{1} {2}", "key": "GPU", "detectionMethod": "pci", },
-    { "type": "memory", "key": "RAM", },
+    { "type": "cpu", "key": "CPU" },
+    { "type": "gpu", "format": "{1} {2}", "key": "GPU", "detectionMethod": "pci" },
+    { "type": "memory", "key": "RAM" },
     { "type": "disk", "key": "DISK", "folders": ["/"] },
     "break",
 
     { "type": "custom", "format": "── SYSTEM ──────────────────────────────────────────────" },
-    { "type": "os", "key": "OS", },
-    { "type": "kernel", "key": "KERNEL", },
-    { "type": "command", "key": "BRANCH", "text": "echo $(git -C ~/ii-p3drovfx branch --show-current) · $(git -C ~/ii-p3drovfx rev-parse --short HEAD)", "shell": "/usr/bin/bash", },
-    { "type": "wm", "format": "{2} {5}", "key": "WM", },
-    { "type": "shell", "key": "SHELL", },
-    { "type": "packages", "format": "{all}", "key": "PKGS", },
+    { "type": "os", "key": "OS" },
+    { "type": "command", "key": "BRANCH", "text": "echo $(git -C ~/ii-p3drovfx branch --show-current) · $(git -C ~/ii-p3drovfx rev-parse --short HEAD)", "shell": "/usr/bin/bash" },
+    { "type": "kernel", "key": "KERNEL" },
+    { "type": "wm", "format": "{2} {5}", "key": "WM" },
+    { "type": "shell", "key": "SHELL" },
+    { "type": "packages", "format": "{all}", "key": "PKGS" },
     "break",
 
     { "type": "custom", "format": "── SESSION ─────────────────────────────────────────────" },
-    { "type": "uptime", "key": "UPTIME", },
-    { "type": "command", "key": "AGE", "text": "echo $(~/.config/fastfetch/assets/progress.sh)", "shell": "/usr/bin/bash", },
-    { "type": "terminal", "key": "TERM", },
+    { "type": "uptime", "key": "UPTIME" },
+    { "type": "command", "key": "AGE", "text": "echo $(~/.config/fastfetch/assets/progress.sh)", "shell": "/usr/bin/bash" },
+    { "type": "terminal", "key": "TERM" },
     "break",
 
     { "type": "colors", "symbol": "circle", "paddingLeft": 2 },
