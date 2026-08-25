@@ -2,17 +2,17 @@
 source ~/.config/fish/scripts/greeting.fish
 
 # Exporting variables
-set -U fish_user_paths $PATH $HOME/.local/bin
+fish_add_path $HOME/.local/bin
 
 # Export attribute for variables
-export MANPAGER="nvim +Man!"
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
-export EDITOR="nvim"
+set -gx MANPAGER 'nvim +Man!'
+set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow'
+set -gx EDITOR nvim
 
 # List directory contents
-alias ls='eza -l --icons=always'
-alias la='eza -a --icons=always'
-alias ll='eza -la --icons=always'
+alias ls='eza -l --group-directories-first --icons=always'
+alias la='eza -a --group-directories-first --icons=always'
+alias ll='eza -la --group-directories-first --icons=always'
 
 # Change the working directory
 alias ..="cd .."
