@@ -1,0 +1,51 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$hostname\
+[](fg:primary bg:secondary)\
+$directory\
+[ ](fg:secondary bg:tertiary)\
+$git_branch\
+$git_status\
+[ ](fg:tertiary)\
+$character\
+"""
+
+palette = "colors"
+
+[palettes.colors]
+primary = "{{colors.primary.default.hex}}"
+on_primary = "{{colors.on_primary.default.hex}}"
+secondary = "{{colors.secondary.default.hex}}"
+on_secondary = "{{colors.on_secondary.default.hex}}"
+tertiary = "{{colors.tertiary.default.hex}}"
+on_tertiary = "{{colors.on_tertiary.default.hex}}"
+
+[username]
+show_always = true
+style_user = "fg:on_primary bold bg:primary"
+style_root = "fg:on_primary bold bg:primary"
+format = "[ $user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:on_primary bold bg:primary"
+format = "[@$hostname ]($style)"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "~/"
+style = "fg:on_secondary bold bg:secondary"
+format = "[ $path ]($style)"
+
+[git_branch]
+style = "fg:on_tertiary bold bg:tertiary"
+format = "[$symbol$branch ]($style)"
+
+[git_status]
+style = "fg:on_tertiary bold bg:tertiary"
+format = "[$all_status$ahead_behind ]($style)"
+
+[character]
+disabled = true
