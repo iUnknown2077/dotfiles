@@ -38,13 +38,15 @@ hl.config({
 
 --- Keybinds ---
 -- Apps
-hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("~/.config/fish/scripts/kitty.fish")) -- Small floating kitty
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("~/.config/fish/scripts/small-kitty.fish")) -- Small floating kitty
 hl.unbind("SUPER + E")
 hl.bind("SUPER + E", hl.dsp.exec_cmd("kitty -1 fish -c yazi")) -- File manager
+hl.unbind("SUPER + W")
+hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox")) -- Browser
 hl.unbind("SUPER + C")
 hl.bind("SUPER + C", hl.dsp.exec_cmd("kitty -1 fish nvim")) -- Code editor
 hl.unbind("SUPER + X")
-hl.bind("SUPER + X", hl.dsp.exec_cmd("obsidian --disable-gpu --enable-wayland-ime")) -- Text editor
+hl.bind("SUPER + X", hl.dsp.exec_cmd("obsidian")) -- Text editor
 hl.unbind("CTRL + SHIFT + ESCAPE")
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty -1 fish -c btop")) -- Task manager
 
