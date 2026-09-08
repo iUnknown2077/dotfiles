@@ -13,6 +13,10 @@ set -gx EDITOR nvim
 alias ls='eza -l --group-directories-first --icons=always'
 alias la='eza -a --group-directories-first --icons=always'
 alias ll='eza -la --group-directories-first --icons=always'
+alias lt='eza -l --tree --level=2 --icons=always'
+
+# Core utilities
+alias cat="bat -p"
 
 # Change the working directory
 alias ..="cd .."

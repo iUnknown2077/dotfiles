@@ -44,7 +44,7 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd("kitty -1 fish -c yazi")) -- File manager
 hl.unbind("SUPER + W")
 hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox")) -- Browser
 hl.unbind("SUPER + C")
-hl.bind("SUPER + C", hl.dsp.exec_cmd("kitty -1 fish nvim")) -- Code editor
+hl.bind("SUPER + C", hl.dsp.exec_cmd("kitty -1 fish -c nvim")) -- Code editor
 hl.unbind("SUPER + X")
 hl.bind("SUPER + X", hl.dsp.exec_cmd("obsidian")) -- Text editor
 hl.unbind("CTRL + SHIFT + ESCAPE")
