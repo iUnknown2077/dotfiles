@@ -10,10 +10,10 @@ set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow'
 set -gx EDITOR nvim
 
 # List directory contents
-alias ls='eza -l --group-directories-first --icons=always'
-alias la='eza -a --group-directories-first --icons=always'
-alias ll='eza -la --group-directories-first --icons=always'
-alias lt='eza -l --tree --level=2 --icons=always'
+alias ls='eza -l --color=always --group-directories-first --icons=always'
+alias la='eza -a --color=always --group-directories-first --icons=always'
+alias ll='eza -al --color=always --group-directories-first --icons=always'
+alias lt='eza -lTL=2 --color=always --group-directories-first --icons=always'
 
 # Core utilities
 alias cat="bat -p"
