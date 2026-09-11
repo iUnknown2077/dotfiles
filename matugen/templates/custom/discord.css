@@ -1,136 +1,100 @@
 /**
- * @name Material Discord
- * @version 3.0.5
- * @description A theme based on Google's Material Design
- * @author CapnKitten
- *
- * @website http://github.com/CapnKitten
- * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Material-Discord/css/source.css
- * @donate https://paypal.me/capnkitten
- * @invite jzJkA6Z
- */
+ * @name midnight
+ * @description A dark, rounded discord theme.
+ * @author refact0r
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
 
-@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css);
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
-/* Material You addon */
-@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/addons/material-you/source.css);
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
-/* MATERIAL YOU DARK THEME SETTINGS */
-.theme-dark {
-	--saturation-modifier: 0.31;
-	--lightness-modifier: 0.225;
-	--text-lightness-modifier: 1.0;
-	--ui-darkness-modifier: 1.0;
-	--matugen-background: {{ colors.background.default.hex }};
-	--matugen-foreground: {{ colors.surface_container.default.hex }};
-	--matugen-hover: {{ colors.primary_container.default.hex }};
-	--app-bg: var(--matugen-background);
-	--main-color: var(--matugen-background);
-	--main-alt: var(--matugen-background);
-	--status-picker-color: var(--matugen-background);
-	--message-color: var(--matugen-background);
-	--message-color-hover: var(--matugen-hover);
-	--message-color-alt: var(--matugen-background);
-	--attachment-color: var(--matugen-foreground);
-	--main-textarea-color: var(--matugen-background);
-	--separator-color: var(--matugen-hover);
-	--card-color-filled: var(--matugen-foreground);
-	--card-color-hover: var(--matugen-hover);
-	--card-color-active: var(--matugen-hover);
-	--card-color-alt: var(--matugen-foreground);
-	--card-border-color: var(--matugen-hover);
-	--input-color: var(--matugen-foreground);
-	--input-color-alt: var(--matugen-foreground);
-
-	._740174f3d6a2c8fe-textArea {
-		background-color: var(--input-color) !important;
-	}
-}
-
-/* MATERIAL YOU LIGHT THEME SETTINGS */
-.theme-light {
-	--saturation-modifier: 0.74;
-	--lightness-modifier: 2.225;
-	--text-lightness-modifier: 1.0;
-	--matugen-background: {{ colors.background.default.hex }};
-	--matugen-foreground: {{ colors.surface_container.default.hex }};
-	--matugen-hover: {{ colors.primary_fixed_dim.default.hex }};
-	--app-bg: var(--matugen-background);
-	--main-color: var(--matugen-background);
-	--main-alt: var(--matugen-background);
-	--status-picker-color: var(--matugen-background);
-	--message-color: var(--matugen-background);
-	--message-color-hover: var(--matugen-hover);
-	--message-color-alt: var(--matugen-background);
-	--attachment-color: var(--matugen-foreground);
-	--main-textarea-color: var(--matugen-background);
-	--separator-color: var(--matugen-hover);
-	--card-color-filled: var(--matugen-foreground);
-	--card-color-hover: var(--matugen-hover);
-	--card-color-active: var(--matugen-hover);
-	--card-color-alt: var(--matugen-foreground);
-	--card-border-color: var(--matugen-hover);
-	--input-color: var(--matugen-foreground);
-	--input-color-alt: var(--matugen-foreground);
-
-	._740174f3d6a2c8fe-textArea {
-		background-color: var(--input-color) !important;
-	}
-}
-
+/* customize things here */
 :root {
-	/* ACCENT HSL AND TEXT COLOR SETTINGS */
-	--accent-hue: {{ colors.primary.default.hue }};
-	--accent-saturation: 71%;
-	--accent-lightness: 61%;
-	--accent-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
-	--accent-button-action: hsl(0,0%,100%);
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
 
-	/* ALERT HSL AND TEXT COLOR SETTINGS */
-	--alert-hue: 0;
-	--alert-saturation: 85%;
-	--alert-lightness: 61%;
-	--alert-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
+	/* top left corner text */
+	--corner-text: 'Midnight';
 
-	/* WARNING HSL AND TEXT COLOR SETTINGS*/
-	--warning-hue: 40;
-	--warning-saturation: 86.4%;
-	--warning-lightness: 56.9%;
-	--warning-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
+	/* color of status indicators and window controls */
+    --online-indicator: {{colors.inverse_primary.default.hex}};     /* change to #23a55a for default green */
+	--dnd-indicator: {{colors.error.default.hex}};                  /* change to #f13f43 for default red */
+	--idle-indicator: {{colors.tertiary_container.default.hex}};    /* change to #f0b232 for default yellow */
+	--streaming-indicator: {{colors.on_primary.default.hex}};       /* change to #593695 for default purple */
 
-	/* MESSAGE SETTINGS */
-	--message-radius: 18px;
-	--message-padding-top: 8px;
-	--message-padding-side: 12px;
+	/* accent colors */
+    --accent-1: {{colors.tertiary.default.hex}};            /* links */
+	--accent-2: {{colors.primary.default.hex}};             /* general unread/mention elements, some icons when active */
+	--accent-3: {{colors.primary.default.hex}};             /* accent buttons */
+	--accent-4: {{colors.surface_bright.default.hex}};      /* accent buttons when hovered */
+	--accent-5: {{colors.primary_fixed_dim.default.hex}};   /* accent buttons when clicked */
+    --accent-new: {{colors.inverse_primary.default.hex}};   /* user panel mute & deafen buttons */
+	--mention:  {{colors.surface.default.hex}};             /* mentions & mention messages */
+	--mention-hover: {{colors.surface_bright.default.hex}}; /* mentions & mention messages when hovered */
 
-	/* MESSAGE MEDIA SETTINGS */
-	--media-radius: 10px;
+	/* text colors */
+	--text-0: {{colors.surface.default.hex}};               /* text on colored elements */
+	--text-1: {{colors.on_surface.default.hex}};            /* other normally white text */
+	--text-2: {{colors.on_surface.default.hex}};            /* headings and important text */
+	--text-3: {{colors.on_surface_variant.default.hex}};    /* normal text */
+	--text-4: {{colors.on_surface_variant.default.hex}};    /* icon buttons and channels */
+	--text-5: {{colors.outline.default.hex}};               /* muted channels/chats and timestamps */
 
-	/* CARD SETTINGS */
-	--card-radius: 8px;
-	--card-radius-big: 18px;
+	/* background and dark colors */
+    --bg-1: {{colors.surface_variant.default.hex}};                             /* dark buttons when clicked */
+	--bg-2: {{colors.surface_container_high.default.hex}};              /* dark buttons */
+	--bg-3: {{colors.surface_container_low.default.hex}};               /* spacing, secondary elements */
+	--bg-4: {{colors.surface.default.hex}};                             /* main background color */
+	--hover: {{colors.surface_bright.default.hex}};                     /* channels and buttons when hovered */
+	--active: {{colors.surface_bright.default.hex}};                    /* channels and buttons when clicked or selected */
+	--message-hover: {{colors.surface_bright.default.hex}};             /* messages when hovered */
 
-	/* BUTTON SETTINGS */
-	--button-height: 36px;
-	--button-padding: 0 24px;
-	--button-action-color: hsl(0,0%,100%);
+	/* amount of spacing and padding */
+	--spacing: 12px;
 
-	/* INPUT SETTINGS */
-	--input-height: 36px;
-	--input-padding: 0 12px;
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease;  /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease;  /* moon icon spin */
+	--icon-spin-transition: 1s ease;    /* round icon button spin (settings, emoji, etc.) */
 
-	/* POPOUT AND MODAL SETTINGS */
-	--popout-radius: 8px;
-	--popout-radius-big: 18px;
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
 
-	/* TOOLTIP SETTINGS */
-	--tooltip-color: hsl(0,0%,38%,0.9);
-	--tooltip-text-color: hsl(0,0%,87%);
-	--tooltip-font-size: 12px;
-	--tooltip-padding: 8px;
-	--tooltip-radius: 8px;
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: block; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
+	--moon-icon-size: auto;
 
-	/* SCROLLBAR SETTINGS */
-	--scrollbar-width: 10px;
-	--scrollbar-thin-width: 6px;
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
+}
+
+/* Selected chat/friend text */
+.selected_f5eb4b,
+.selected_f6f816 .link_d8bfb3 {
+  color: var(--text-0) !important;
+  background: var(--accent-3) !important;
+}
+
+.selected_f6f816 .link_d8bfb3 * {
+  color: var(--text-0) !important;
+  fill: var(--text-0) !important;
 }
