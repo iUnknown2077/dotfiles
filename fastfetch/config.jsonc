@@ -8,7 +8,7 @@
     "padding": { "top": 4, "right": 2, "left": 0 }
   },
   "display": {
-    "color": { "keys": "red", "separator": "white", "output": "white" },
+    "color": { "keys": "green", "separator": "white", "output": "white" },
     "key": { "width": 9 },
     "separator": "  ",
     "percent": {
@@ -18,7 +18,7 @@
   },
   "modules": [
     "break",
-    { "type": "title", "format": "{user-name-colored} {at-symbol-colored} {host-name-colored}", "color": { "user": "white", "at": "red", "host": "white" } },
+    { "type": "title", "format": "{user-name-colored} {at-symbol-colored} {host-name-colored}", "color": { "user": "white", "at": "green", "host": "white" } },
     { "type": "custom", "format": "· Android 17 inspired CachyOS desktop", "outputColor": "light_black" },
     "break",
 
@@ -33,8 +33,8 @@
     { "type": "os", "key": "OS" },
     { "type": "command", "key": "BRANCH", "text": "echo $(git -C ~/ii-p3drovfx branch --show-current) · $(git -C ~/ii-p3drovfx rev-parse --short HEAD)", "shell": "/usr/bin/bash" },
     { "type": "kernel", "key": "KERNEL" },
-    { "type": "wm", "format": "{2} {5}", "key": "WM" },
-    { "type": "shell", "key": "SHELL" },
+    { "type": "wm", "format": "{pretty-name}", "key": "WM" },
+    { "type": "shell", "format": "{pretty-name}", "key": "SHELL" },
     { "type": "packages", "format": "{all}", "key": "PKGS" },
     "break",
 
