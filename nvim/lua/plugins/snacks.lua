@@ -2,9 +2,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      bigfile = { enabled = true },
       dashboard = {
-        enabled = true,
         preset = {
           header = [[
 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
