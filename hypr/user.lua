@@ -1,20 +1,15 @@
 --- Env ---
--- Editor
 hl.env("EDITOR", "nvim")
 hl.env("VISUAL", "nvim")
 
 --- Execs ---
 hl.on("hyprland.start", function()
-	-- Daemons
 	hl.exec_cmd("protonvpn-app")
 	hl.exec_cmd("pika-backup-monitor")
 	hl.exec_cmd("sleep 3 && shelly-notifications")
-
-	-- Apps
 end)
 
 --- General ---
--- Input
 hl.config({
 	input = {
 		kb_layout = "pl",
@@ -37,7 +32,6 @@ hl.config({
 })
 
 --- Keybinds ---
--- Apps
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("~/.config/fish/scripts/small-kitty.fish")) -- Small floating kitty
 hl.unbind("SUPER + E")
 hl.bind("SUPER + E", hl.dsp.exec_cmd("kitty -1 fish -c yazi")) -- File manager
@@ -51,12 +45,8 @@ hl.unbind("CTRL + SHIFT + ESCAPE")
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty -1 fish -c btop")) -- Task manager
 
 --- Rules ---
--- Transparency and blur
---hl.window_rule({ match = { class = ".*" }, opacity = "0.89 override 0.89 override" })
---hl.window_rule({ match = { class = ".*" }, no_blur = false })
-
--- Apps
 hl.window_rule({ match = { class = "^(proton.vpn.app.gtk)$" }, workspace = "special silent" })
 hl.window_rule({ match = { class = "^([Ss]ignal)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^([Vv]esktop)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(org.vinegarhq.Sober)$" }, workspace = "9 silent" })
+hl.window_rule({ match = { class = "^(pavucontrol-qt)$" }, float = true, center = true, size = { 1280, 800 } })
