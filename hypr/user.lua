@@ -32,7 +32,7 @@ hl.config({
 })
 
 --- Keybinds ---
-hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("kitty", { float = true, center = true, size = { 900, 600 } })) -- Small floating terminal
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("kitty", { float = true, center = true, size = { 900, 600 } })) -- Floating terminal
 hl.unbind("SUPER + E")
 hl.bind("SUPER + E", hl.dsp.exec_cmd("kitty -1 fish -c yazi")) -- File manager
 hl.unbind("SUPER + W")
