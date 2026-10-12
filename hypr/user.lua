@@ -45,8 +45,44 @@ hl.unbind("CTRL + SHIFT + ESCAPE")
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty -1 fish -c btop")) -- Task manager
 
 --- Rules ---
-hl.window_rule({ match = { class = "^(proton.vpn.app.gtk)$" }, workspace = "special silent" })
-hl.window_rule({ match = { class = "^([Ss]ignal)$" }, workspace = "4 silent" })
-hl.window_rule({ match = { class = "^([Vv]esktop)$" }, workspace = "4 silent" })
-hl.window_rule({ match = { class = "^(org.vinegarhq.Sober)$" }, workspace = "9 silent" })
-hl.window_rule({ match = { class = "^(pavucontrol-qt)$" }, float = true, center = true, size = { 1280, 800 } })
+hl.window_rule({
+	match = { class = "^(proton.vpn.app.gtk)$" },
+	workspace = "special silent",
+})
+hl.window_rule({
+	match = { class = "^([Ss]ignal)$" },
+	workspace = "4 silent",
+})
+hl.window_rule({
+	match = { class = "^([Vv]esktop)$" },
+	workspace = "4 silent",
+})
+hl.window_rule({
+	match = { class = "^([Ss]team|[Hh]eroic|net.lutris.Lutris|io.github.Faugus.faugus-launcher)$" },
+	workspace = "5",
+})
+hl.window_rule({
+	match = { class = "^(steam_app.*|gamescope)$" },
+	workspace = "6",
+})
+hl.window_rule({
+	match = { class = "^(virt-manager|winboat)$" },
+	workspace = "7",
+})
+hl.window_rule({
+	match = { title = "^(.*QEMU/KVM.*|xfreerdp)$" },
+	workspace = "8",
+	float = true,
+	center = true,
+	size = { 1600, 900 },
+})
+hl.window_rule({
+	match = { class = "^(org.vinegarhq.Sober)$" },
+	workspace = "9 silent",
+})
+hl.window_rule({
+	match = { class = "^(pavucontrol-qt)$" },
+	float = true,
+	center = true,
+	size = { 1280, 800 },
+})
