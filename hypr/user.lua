@@ -50,11 +50,7 @@ hl.window_rule({
 	workspace = "special silent",
 })
 hl.window_rule({
-	match = { class = "^([Ss]ignal)$" },
-	workspace = "4 silent",
-})
-hl.window_rule({
-	match = { class = "^([Vv]esktop)$" },
+	match = { class = "^([Ss]ignal|[Vv]esktop)$" },
 	workspace = "4 silent",
 })
 hl.window_rule({
