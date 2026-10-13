@@ -66,7 +66,7 @@ hl.window_rule({
 	workspace = "7",
 })
 hl.window_rule({
-	match = { title = "^(.*QEMU/KVM.*|xfreerdp)$" },
+	match = { title = "^(.*QEMU/KVM.*|.*FreeRDP.*)$" },
 	workspace = "8",
 	float = true,
 	center = true,
