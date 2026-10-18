@@ -48,7 +48,12 @@ hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty -1 fish -c btop")) -- Ta
 
 -- Workspace 4, Messaging
 hl.window_rule({
-	match = { class = "^([Ss]ignal|[Vv]esktop)$" },
+	match = { class = "^([Ss]ignal)$" },
+	workspace = "4 silent",
+	no_screen_share = true,
+})
+hl.window_rule({
+	match = { class = "^([Vv]esktop)$" },
 	workspace = "4 silent",
 })
 
@@ -63,7 +68,10 @@ hl.window_rule({
 	immediate = true,
 })
 hl.window_rule({
-	match = { title = "^(Ustawienia Steam|Lista znajomych)$" },
+	match = {
+		class = "^([Ss]team)$",
+		title = "negative:^([Ss]team)$",
+	},
 	float = true,
 	center = true,
 })
