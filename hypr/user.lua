@@ -62,6 +62,11 @@ hl.window_rule({
 	idle_inhibit = "fullscreen",
 	immediate = true,
 })
+hl.window_rule({
+	match = { title = "^(Ustawienia Steam|Lista znajomych)$" },
+	float = true,
+	center = true,
+})
 
 -- Workspace 6, Games
 hl.window_rule({
@@ -115,11 +120,4 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 1280, 800 },
-})
-
--- Floating, Steam settings & friends list
-hl.window_rule({
-	match = { title = "^(Ustawienia Steam|Lista znajomych)$" },
-	float = true,
-	center = true,
 })
