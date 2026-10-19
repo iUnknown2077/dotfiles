@@ -46,6 +46,25 @@ hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty -1 fish -c btop")) -- Ta
 
 --- Rules ---
 
+-- Suppress maximize
+hl.window_rule({
+	match = { class = ".*" },
+	suppress_event = "maximize",
+})
+
+-- Fix xwayland drags
+hl.window_rule({
+	match = {
+		class = "^$",
+		title = "^$",
+		xwayland = true,
+		float = true,
+		fullscreen = false,
+		pin = false,
+	},
+	no_focus = true,
+})
+
 -- Workspace 4, Messaging
 hl.window_rule({
 	match = { class = "^([Ss]ignal)$" },
