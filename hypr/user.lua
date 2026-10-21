@@ -148,3 +148,11 @@ hl.window_rule({
 	center = true,
 	size = { 1280, 800 },
 })
+
+-- Floating, Image viewer
+hl.window_rule({
+	match = { class = "^(imv)$" },
+	float = true,
+	center = true,
+	size = { 875, 600 },
+})
